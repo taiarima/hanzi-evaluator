@@ -28,14 +28,20 @@ let simplified = true;
 let currentCorrectHanzi;
 
 // These variables will be used in the calculateRange function
-let highestCorrectHanzi;
-let lowestIncorrectHanzi;
+let highestCorrectHanzi = 0;
+let lowestIncorrectHanzi = 6000;
 let currentStreak = 0;
 let totalAnswers = 0;
 let correctAnswersThisRound = 0;
 let incorrectAnswersThisRound = 0;
+let min = 0;
+let max = 500;
+let correctAnswer;
+let triesUntilTestOver = 100;
+const correctAnswers = [];
+const incorrectAnswers = [];
 
-function generatePrompt(min, max) {
+function generatePrompt() {
   // This array will hold the four random hanzi objects which make up the choices
   const hanziArray = [];
   for (let i = 0; i < pronChoiceList.length; i++) {
@@ -70,14 +76,84 @@ function shuffleArray(array) {
     [array[i], array[j]] = [array[j], array[i]];
   }
 }
-generatePrompt(0, 500);
+generatePrompt();
 
-function generateRandomHanzi(min, max) {
+function generateRandomHanzi() {
   const randomNum = Math.round(Math.random() * (max - min)) + min;
   return hanziList[randomNum];
 }
 
-function calculateRange() {}
+function calculateRange() {
+  // Update value based on whether user answered correctly
+  const currentHanziIndex = hanziList.indexOf(currentCorrectHanzi);
+  if (correctAnswer) {
+    highestCorrectHanzi = Math.max(currentHanziIndex, highestCorrectHanzi);
+    currentStreak = currentStreak > 0 ? ++currentStreak : 1;
+    correctAnswers.push(currentHanziIndex);
+    correctAnswersThisRound++;
+  } else {
+    lowestIncorrectHanzi = Math.min(currentHanziIndex, lowestIncorrectHanzi);
+    currentStreak = currentStreak < 0 ? --currentStreak : -1;
+    incorrectAnswersThisRound++;
+    incorrectAnswers.push(currentHanziIndex);
+  }
+
+  // If user has gone through 100 hanzi, the test is over
+  if (totalAnswers >= triesUntilTestOver) {
+    // Test is over, determine user's score
+    // Maybe call a game over function
+    const userScore = estimateSkillLevel();
+  }
+
+  // Otherwise, determine new top and bottom if necessary according to user's current performance
+  else {
+    if (currentStreak >= 5) {
+      // Set new bottom, push top up
+      min = highestCorrectHanzi;
+      max = Math.min(max * 2, hanziList.length);
+    } else if (currentStreak <= -5) {
+      // Set new top, push bottom down
+      max = lowestIncorrectHanzi;
+      min = min / 2;
+    } else if (correctAnswersThisRound + incorrectAnswersThisRound >= 15) {
+      // Adjust top and bottom accordingly
+      if (highestCorrectHanzi > lowestIncorrectHanzi) {
+        min = lowestIncorrectHanzi;
+        max = highestCorrectHanzi;
+      } else {
+        max = highestCorrectHanzi;
+        min = lowestIncorrectHanzi;
+      }
+    }
+  }
+}
+
+function estimateSkillLevel() {
+  // Calculate average difficulty level of correct answers
+  const sumCorrect = correctAnswers.reduce((acc, level) => acc + level, 0);
+  const avgCorrect = sumCorrect / correctAnswers.length;
+
+  // Calculate average difficulty level of incorrect answers
+  const sumIncorrect = incorrectAnswers.reduce((acc, level) => acc + level, 0);
+  const avgIncorrect = sumIncorrect / incorrectAnswers.length;
+
+  // Determine the range of difficulty levels covered by incorrect answers
+  const lowestIncorrect = Math.min(...incorrectAnswers);
+  const highestIncorrect = Math.max(...incorrectAnswers);
+  const rangeIncorrect = highestIncorrect - lowestIncorrect;
+
+  // Determine the range of difficulty levels covered by correct answers
+  const lowestCorrect = Math.min(...correctAnswers);
+  const highestCorrect = Math.max(...correctAnswers);
+  const rangeCorrect = highestCorrect - lowestCorrect;
+
+  // Compare the ranges of correct and incorrect answers
+  if (rangeCorrect > rangeIncorrect) {
+    return avgCorrect;
+  } else {
+    return avgIncorrect;
+  }
+}
 
 // Coding Modal windows
 // Get the modal
@@ -129,7 +205,7 @@ window.onclick = function (event) {
   }
 };
 
-// Makes sure only one choice can be selected at once
+// Makes sure only one pronunciation choice can be selected at once
 pronChoiceList.forEach((button) => {
   button.addEventListener("click", (event) => {
     if (event.target.classList.contains("choice-activated")) {
@@ -154,7 +230,7 @@ pronChoiceList.forEach((button) => {
   });
 });
 
-// Makes sure only one choice can be selected at once
+// Makes sure only one meaning choice can be selected at once
 meaningChoiceList.forEach((button) => {
   button.addEventListener("click", (event) => {
     if (event.target.classList.contains("choice-activated")) {
@@ -196,8 +272,11 @@ submitAnswerBtn.addEventListener("click", function () {
       currentCorrectHanzi.meaning == meanSelection
     ) {
       console.log("Correct answer!");
+      correctAnswer = true;
     } else {
       console.log("Incorrect answer :(");
+      correctAnswer = false;
     }
+    calculateRange();
   }
 });

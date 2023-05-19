@@ -11,7 +11,7 @@
   <body>
     <nav>
       <div class="logo">
-        <img src="" />
+        <img src="kanjilogo.png" />
       </div>
       <div class="title">
         <h1>Hanzi Knowledge Evaluator</h1>
@@ -31,7 +31,7 @@
       </div>
     </nav>
     <main>
-      <div class="intro-text">
+      <div class="intro-text hidden">
         <h1 class="intro-title">How many hanzi do you know?</h1>
         <p>Available in both Simplified and Traditional Characters!</p>
         <div class="intro-paragraph">
@@ -54,7 +54,7 @@
       </div>
 
       <div class="app-container">
-        <textarea class="hanzi-prompt" readonly>汉</textarea>
+        <textarea class="hanzi-prompt" readonly></textarea>
         <p>Select the correct pronunciation and definition.</p>
         <div class="button-container pronunciation-choices">
           <button class="pron-1 pron-choice">Pron 1</button>
@@ -73,6 +73,11 @@
           Note: Clicking "I don't know" has the same result as submitting an
           incorrect answer.
         </p>
+      </div>
+
+      <div class="results hidden">
+        <h1>Your results:</h1>
+        <h2>Wow, you know approximately 1234 Hanzi!</h2>
       </div>
       <div class="modal-window modal-choose-list">
         <div class="modal-content">
