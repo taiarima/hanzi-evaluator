@@ -17,9 +17,67 @@ const listLowerRange = document.querySelector(".lower-range");
 const listUpperRange = document.querySelector(".upper-range");
 const listUserName = document.getElementById(".list-name");
 const introText = document.querySelector(".intro-text");
+const pronChoiceList = document.querySelectorAll(".pron-choice");
+const meaningChoiceList = document.querySelectorAll(".mean-choice");
+const submitAnswerBtn = document.querySelector(".submit-answer");
 
-const firstHanzi = hanziList[0].Simplified;
-hanziPrompt.textContent = firstHanzi;
+// This value will be set by the user when they begin the test to determine whether they are presented simplified or traditional characters
+let simplified = true;
+
+// The user must select the pronunciation and meaning which match this hanzi object
+let currentCorrectHanzi;
+
+// These variables will be used in the calculateRange function
+let highestCorrectHanzi;
+let lowestIncorrectHanzi;
+let currentStreak = 0;
+let totalAnswers = 0;
+let correctAnswersThisRound = 0;
+let incorrectAnswersThisRound = 0;
+
+function generatePrompt(min, max) {
+  // This array will hold the four random hanzi objects which make up the choices
+  const hanziArray = [];
+  for (let i = 0; i < pronChoiceList.length; i++) {
+    hanziArray.push(generateRandomHanzi(min, max));
+  }
+
+  // Fill up the pronunciation choices
+  hanziArray.forEach(
+    (hanzi, i) => (pronChoiceList[i].textContent = hanzi.pronunciation)
+  );
+
+  // Shuffle the array so that the meaning and pronunciations are not in the same columns
+  shuffleArray(hanziArray);
+
+  // Fill up the meaning choices
+  hanziArray.forEach(
+    (hanzi, i) => (meaningChoiceList[i].textContent = hanzi.meaning)
+  );
+
+  // Choose one of the Hanzi to be the correct answer
+  const correctHanzi =
+    hanziArray[Math.floor(Math.random() * hanziArray.length)];
+  hanziPrompt.textContent = simplified
+    ? correctHanzi.simplified
+    : correctHanzi.traditional;
+  currentCorrectHanzi = correctHanzi;
+}
+
+function shuffleArray(array) {
+  for (let i = array.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [array[i], array[j]] = [array[j], array[i]];
+  }
+}
+generatePrompt(0, 500);
+
+function generateRandomHanzi(min, max) {
+  const randomNum = Math.round(Math.random() * (max - min)) + min;
+  return hanziList[randomNum];
+}
+
+function calculateRange() {}
 
 // Coding Modal windows
 // Get the modal
@@ -71,8 +129,75 @@ window.onclick = function (event) {
   }
 };
 
-// submitListBtn.onclick = function () {
-//   appContainer.classList.remove("hidden");
-//   introText.classList.add("hidden");
-//   modalChooseList.style.display = "none";
-// };
+// Makes sure only one choice can be selected at once
+pronChoiceList.forEach((button) => {
+  button.addEventListener("click", (event) => {
+    if (event.target.classList.contains("choice-activated")) {
+      event.target.classList.remove("choice-activated");
+    } else {
+      // Remove 'choice-activated' class from all buttons
+      pronChoiceList.forEach((btn) => btn.classList.remove("choice-activated"));
+
+      // Add 'choice-activated' class to the clicked button
+      button.classList.toggle("choice-activated");
+    }
+
+    if (
+      document.querySelector(".pron-choice.choice-activated") &&
+      document.querySelector(".mean-choice.choice-activated")
+    ) {
+      submitAnswerBtn.textContent = "Submit Answer";
+    } else {
+      submitAnswerBtn.textContent = "I don't know";
+      console.log("I am getting here");
+    }
+  });
+});
+
+// Makes sure only one choice can be selected at once
+meaningChoiceList.forEach((button) => {
+  button.addEventListener("click", (event) => {
+    if (event.target.classList.contains("choice-activated")) {
+      event.target.classList.remove("choice-activated");
+    } else {
+      // Remove 'choice-activated' class from all buttons
+      meaningChoiceList.forEach((btn) =>
+        btn.classList.remove("choice-activated")
+      );
+
+      // Add 'choice-activated' class to the clicked button
+      button.classList.toggle("choice-activated");
+    }
+
+    if (
+      document.querySelector(".pron-choice.choice-activated") &&
+      document.querySelector(".mean-choice.choice-activated")
+    ) {
+      submitAnswerBtn.textContent = "Submit Answer";
+    } else {
+      submitAnswerBtn.textContent = "I don't know";
+      console.log("I am getting here");
+    }
+  });
+});
+
+submitAnswerBtn.addEventListener("click", function () {
+  if (submitAnswerBtn.textContent === "I don't know") {
+    // mark it incorrect
+  } else {
+    const pronSelection = document.querySelector(
+      ".pron-choice.choice-activated"
+    ).textContent;
+    const meanSelection = document.querySelector(
+      ".mean-choice.choice-activated"
+    ).textContent;
+    if (
+      currentCorrectHanzi.pronunciation == pronSelection &&
+      currentCorrectHanzi.meaning == meanSelection
+    ) {
+      console.log("Correct answer!");
+    } else {
+      console.log("Incorrect answer :(");
+    }
+  }
+});

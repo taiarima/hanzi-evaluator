@@ -291,3 +291,8 @@ footer {
   width: 100%;
   background-color: var(--color-medium);
 }
+
+.choice-activated {
+  background-color: limegreen;
+  border: 2px solid blue;
+}
