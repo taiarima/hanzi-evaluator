@@ -1,0 +1,293 @@
+:root {
+  --color-dark: #123805;
+  --color-medium: #618954;
+  --color-bright: #61c554;
+}
+
+body {
+  background-color: var(--color-dark);
+  color: #fff;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+nav {
+  background-color: var(--color-bright);
+  display: flex;
+  align-items: center;
+  height: 60px;
+  padding: 20px 20px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1;
+  justify-content: flex-end;
+}
+
+.logo img {
+  position: absolute;
+  top: 0;
+  height: 120px;
+  margin-right: 20px;
+  border-radius: 50%;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+}
+
+.nav-links a {
+  color: #fff;
+  font-weight: bold;
+  text-decoration: none;
+  margin-right: 60px;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.nav-links a:hover {
+  color: rgb(201, 201, 170);
+}
+
+.title {
+  font-size: 2vw;
+  position: absolute;
+  left: 150px;
+}
+
+.app-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: calc(100vh - 60px);
+  padding: 20px;
+  margin-top: -125px;
+  position: relative;
+  top: 80px;
+}
+
+.hidden {
+  opacity: 0;
+}
+
+.hanzi-prompt {
+  width: 300px;
+  height: 300px;
+  padding: 10px;
+  box-sizing: border-box;
+  border: none;
+  background-color: var(--color-medium);
+  color: #fff;
+  margin-bottom: 20px;
+  font-size: 14rem;
+  resize: none;
+  text-align: center;
+  resize: none;
+}
+
+.hanzi-prompt::-webkit-scrollbar {
+  display: none;
+}
+
+.button-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+}
+
+button {
+  background-color: var(--color-bright);
+  color: #fff;
+  border: none;
+  padding: 20px;
+  font-size: 18px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #34db63;
+}
+
+/* Styles for the button that replaces navbar links on smaller screens */
+.menu-toggle {
+  display: none;
+}
+
+/* Media query for smaller screens */
+@media screen and (max-width: 1100px) {
+  /* Hide the navbar links */
+  .nav-links {
+    display: none;
+  }
+
+  /* Show the menu toggle button */
+  /* .menu-toggle {
+      display: block;
+    } */
+
+  /* Style the menu toggle button */
+  .menu-toggle {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 60px;
+    /* margin: 5px; */
+    cursor: pointer;
+    /* width: calc(30px - 20px); */
+    margin-left: auto;
+    margin-right: 30px;
+    background-color: var(--color-medium);
+  }
+
+  .menu-toggle .bar {
+    width: 100%;
+    height: 2px;
+    background-color: black;
+  }
+}
+
+/* Styles for the drop-down menu */
+.dropdown {
+  display: none;
+}
+
+.dropdown-item {
+  display: block;
+  padding: 5px;
+  background-color: #f1f1f1;
+  border: 1px solid black;
+  cursor: pointer;
+  width: 100%;
+}
+
+/* Show the drop-down menu when the menu toggle button is clicked */
+.menu-toggle:focus + .dropdown {
+  display: block;
+  position: absolute;
+  top: 100%;
+  right: 0;
+  width: 200px;
+  z-index: 2;
+}
+
+.menu-toggle:hover {
+  background-color: var(--color-bright);
+}
+
+.hamburger-button {
+  height: 40px;
+  width: 40px;
+  filter: invert(100%);
+}
+
+/* The Modal (background) */
+.modal-window {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(6px);
+}
+
+/* Modal Content/Box */
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 60%;
+  color: black;
+}
+
+.modal-content input[type="text"] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+  font-family: Arial, sans-serif;
+  color: #333;
+  background-color: #fff;
+}
+
+.modal-content h1 {
+  text-align: center;
+}
+
+/* Close Button */
+.close-modal-btn {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close-modal-btn:hover,
+.close-modal-btn:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.choose-list-text label {
+  display: block;
+  margin-bottom: 10px;
+  padding: 10px;
+}
+
+.choose-list-text input[type="number"] {
+  width: 80px;
+}
+
+.submit-list-btn {
+  display: inline-block;
+  border-radius: 5px;
+  margin-left: 40%;
+}
+
+.intro-text {
+  position: absolute;
+  top: 100px;
+  right: 30%;
+  display: block;
+  margin: 0 auto;
+  max-width: 800px;
+  text-align: center;
+  padding-bottom: 100px;
+}
+
+.intro-title {
+  margin-bottom: -10px;
+}
+
+.intro-paragraph {
+  text-align: justify;
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+  text-align: center;
+  width: 100%;
+  background-color: var(--color-medium);
+}

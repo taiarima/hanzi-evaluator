@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hanzi Knowledge Evaluator</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <link rel="icon" href="kanjilogo.png" />
+  </head>
+  <body>
+    <nav>
+      <div class="logo">
+        <img src="" />
+      </div>
+      <div class="title">
+        <h1>Hanzi Knowledge Evaluator</h1>
+      </div>
+      <div class="nav-links">
+        <a class="choose-list-link" href="#">Start Test</a>
+        <a class="about-link" href="#">About</a>
+        <a class="help-link" href="#">Help</a>
+      </div>
+      <button class="menu-toggle" tabindex="0">
+        <img class="hamburger-button" src="hamburgerButtonImg.png" />
+      </button>
+      <div class="dropdown">
+        <a class="dropdown-item" href="#">Start Test</a>
+        <a class="dropdown-item" href="#">About</a>
+        <a class="dropdown-item" href="#">Help</a>
+      </div>
+    </nav>
+    <main>
+      <div class="intro-text">
+        <h1 class="intro-title">How many hanzi do you know?</h1>
+        <p>Available in both Simplified and Traditional Characters!</p>
+        <div class="intro-paragraph">
+          <p>
+            This is a program designed to evaluate your current level of
+            knowledge of hanzi (Chinese characters) as used in Mandarin Chinese.
+            You will be presented characters and be asked to select the correct
+            pronunciation and meaning in English in a multiple choice format. At
+            the end of the test, you will be given an estimate of the
+            approximate amount of Chinese characters you know.
+          </p>
+          <p>
+            The goal of the test is to give you an idea of how many Chinese
+            characters you know in order to help you evaluate your current level
+            and guide your study goals. The test will take approximately 5-10
+            minutes to complete. Please consider giving feedback for this tool
+            if you found it useful or interesting.
+          </p>
+        </div>
+      </div>
+
+      <div class="app-container hidden">
+        <textarea class="hanzi-prompt" readonly>汉</textarea>
+        <div class="button-container pronunciation-choices">
+          <button class="pron-1">Pron 1</button>
+          <button class="pron-2">Pron 1</button>
+          <button class="pron-3">Pron 1</button>
+          <button class="pron-4">Pron 1</button>
+        </div>
+        <div class="button-container definition-choices">
+          <button class="def-1">Def 1</button>
+          <button class="def-2">Def 1</button>
+          <button class="def-3">Def 1</button>
+          <button class="def-4">Def 1</button>
+        </div>
+      </div>
+      <div class="modal-window modal-choose-list">
+        <div class="modal-content">
+          <span class="close-modal-btn close-list-modal">&times;</span>
+          <div class="choose-list-text">
+            <h1>Test your Hanzi Knowledge</h1>
+            <p>There will be a short explanation here</p>
+            <h2>Choose your character set:</h2>
+            <button>Simplified</button>
+            <button>Traditional</button>
+            <button>Begin Test!</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="modal-window modal-about">
+        <div class="modal-content">
+          <span class="close-about-btn close-modal-btn">&times;</span>
+          <div class="about-modal-text">
+            <h1>About</h1>
+          </div>
+        </div>
+      </div>
+      <div class="modal-window modal-help">
+        <div class="modal-content">
+          <span class="close-help-btn close-modal-btn">&times;</span>
+          <div class="help-modal-text">
+            <h1>Help</h1>
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
+  <footer>
+    <p>Program Copyright Tai Arima</p>
+  </footer>
+  <script src="hanzilist.js"></script>
+  <script src="script.js"></script>
+</html>
