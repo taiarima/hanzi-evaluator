@@ -31,7 +31,7 @@
       </div>
     </nav>
     <main>
-      <div class="intro-text hidden">
+      <div class="intro-text">
         <h1 class="intro-title">How many hanzi do you know?</h1>
         <p>Available in both Simplified and Traditional Characters!</p>
         <div class="intro-paragraph">
@@ -53,22 +53,24 @@
         </div>
       </div>
 
-      <div class="app-container">
+      <div class="app-container hidden">
         <textarea class="hanzi-prompt" readonly></textarea>
-        <p>Select the correct pronunciation and definition.</p>
+        <p class="pron-prompt">Select the correct pronunciation:</p>
         <div class="button-container pronunciation-choices">
           <button class="pron-1 pron-choice">Pron 1</button>
           <button class="pron-2 pron-choice">Pron 1</button>
           <button class="pron-3 pron-choice">Pron 1</button>
           <button class="pron-4 pron-choice">Pron 1</button>
         </div>
+        <p class="mean-prompt">Select the correct definition:</p>
         <div class="button-container meaning-choices">
           <button class="mean-1 mean-choice">Def 1</button>
           <button class="mean-2 mean-choice">Def 1</button>
           <button class="mean-3 mean-choice">Def 1</button>
           <button class="mean-4 mean-choice">Def 1</button>
         </div>
-        <button class="submit-answer">I don't know</button>
+        <p class="ans-prompt">Confirm Answer:</p>
+        <button class="submit-answer">I don't know this hanzi</button>
         <p>
           Note: Clicking "I don't know" has the same result as submitting an
           incorrect answer.
@@ -77,18 +79,40 @@
 
       <div class="results hidden">
         <h1>Your results:</h1>
-        <h2>Wow, you know approximately 1234 Hanzi!</h2>
+        <h2 class="result-string">Wow, you know approximately 1234 Hanzi!</h2>
+        <textarea class="incorrect-hanzi">Test</textarea>
       </div>
       <div class="modal-window modal-choose-list">
         <div class="modal-content">
           <span class="close-modal-btn close-list-modal">&times;</span>
           <div class="choose-list-text">
             <h1>Test your Hanzi Knowledge</h1>
-            <p>There will be a short explanation here</p>
-            <h2>Choose your character set:</h2>
-            <button>Simplified</button>
-            <button>Traditional</button>
-            <button>Begin Test!</button>
+            <p>
+              The goal of this test is to estimate the amount of hanzi you know.
+              You will be presented with a hanzi prompt, and be asked to select
+              the correct pronunciation and definition from four choices. If you
+              do not know the answer, you can simply click the "I don't know"
+              button. Submitting "I don't know" has the exact same effect as
+              submitting an incorrect answer. You are encouraged, however, to
+              not guess if you are unsure of the correct answer. Guessing or
+              using process of elimination when you are unsure of the answer
+              will result in a more inaccurate calculation of your knowledge.
+            </p>
+            <p>
+              Results given are an estimation. If you would like a more accurate
+              calculation of your knowledge, try taking the test multiple times
+              and averaging your results.
+            </p>
+            <p>Good luck!</p>
+            <h1>Choose your character set:</h1>
+            <div class="button-container">
+              <button class="simplified-btn">Simplified</button>
+              <button class="traditional-btn">Traditional</button>
+            </div>
+            <br />
+            <div class="button-container">
+              <button class="begin-button disabled-button">Begin Test!</button>
+            </div>
           </div>
         </div>
       </div>

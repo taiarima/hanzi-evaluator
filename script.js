@@ -11,15 +11,18 @@ const appContainer = document.querySelector(".app-container");
 const hanziPrompt = document.querySelector(".hanzi-prompt");
 const answerText = document.querySelector(".answer-text");
 const checkAnsBtn = document.querySelector(".check-ans-btn");
-const undoBtn = document.querySelector(".undo-btn");
 const submitListBtn = document.querySelector(".submit-list-btn");
-const listLowerRange = document.querySelector(".lower-range");
-const listUpperRange = document.querySelector(".upper-range");
 const listUserName = document.getElementById(".list-name");
 const introText = document.querySelector(".intro-text");
 const pronChoiceList = document.querySelectorAll(".pron-choice");
 const meaningChoiceList = document.querySelectorAll(".mean-choice");
 const submitAnswerBtn = document.querySelector(".submit-answer");
+const beginTestBtn = document.querySelector(".begin-button");
+const simpBtn = document.querySelector(".simplified-btn");
+const tradBtn = document.querySelector(".traditional-btn");
+const pronPrompt = document.querySelector(".pron-prompt");
+const meanPrompt = document.querySelector(".mean-prompt");
+const ansPrompt = document.querySelector(".ans-prompt");
 
 // This value will be set by the user when they begin the test to determine whether they are presented simplified or traditional characters
 let simplified = true;
@@ -42,6 +45,14 @@ const correctAnswers = [];
 const incorrectAnswers = [];
 
 function generatePrompt() {
+  // Reset the GUI
+  ansPrompt.textContent = "Confirm Answer.";
+  pronPrompt.textContent = "Select the correct pronunciation:";
+  meanPrompt.textContent = "Select the correct definition:";
+  submitAnswerBtn.textContent = "I don't know this hanzi";
+  pronChoiceList.forEach((btn) => btn.classList.remove("choice-activated"));
+  meaningChoiceList.forEach((btn) => btn.classList.remove("choice-activated"));
+
   // This array will hold the four random hanzi objects which make up the choices
   const hanziArray = [];
   for (let i = 0; i < pronChoiceList.length; i++) {
@@ -58,7 +69,8 @@ function generatePrompt() {
 
   // Fill up the meaning choices
   hanziArray.forEach(
-    (hanzi, i) => (meaningChoiceList[i].textContent = hanzi.meaning)
+    (hanzi, i) =>
+      (meaningChoiceList[i].textContent = trimMeaning(hanzi.meaning))
   );
 
   // Choose one of the Hanzi to be the correct answer
@@ -76,13 +88,30 @@ function shuffleArray(array) {
     [array[i], array[j]] = [array[j], array[i]];
   }
 }
-generatePrompt();
+
+// For meanings that are too long, delete all content after second semi-colon
+function trimMeaning(meaning) {
+  // Find the index of the second semicolon
+  const secondSemicolonIndex = meaning.indexOf(";", meaning.indexOf(";") + 1);
+
+  // If the second semicolon is found
+  if (secondSemicolonIndex !== -1) {
+    // Extract the substring before the second semicolon
+    return meaning.substring(0, secondSemicolonIndex);
+  }
+
+  // If the second semicolon is not found, return the original string
+  return meaning;
+}
 
 function generateRandomHanzi() {
   const randomNum = Math.round(Math.random() * (max - min)) + min;
   return hanziList[randomNum];
 }
 
+// Keeps track of incorrect and correct answers and calculates a new range based on these
+
+// TODO: This algorithm is currently broken as it results in dead-ends....
 function calculateRange() {
   // Update value based on whether user answered correctly
   const currentHanziIndex = hanziList.indexOf(currentCorrectHanzi);
@@ -126,6 +155,13 @@ function calculateRange() {
       }
     }
   }
+}
+
+function initializeTest() {
+  introText.classList.add("hidden");
+  appContainer.classList.remove("hidden");
+  modalChooseList.style.display = "none";
+  generatePrompt();
 }
 
 function estimateSkillLevel() {
@@ -182,6 +218,9 @@ helpLink.onclick = function () {
 // When the user clicks on <span> (x), close the modal
 closeListModal.onclick = function () {
   modalChooseList.style.display = "none";
+  simpBtn.classList.remove("choice-activated");
+  tradBtn.classList.remove("choice-activated");
+  beginTestBtn.classList.add("disabled-button");
 };
 
 closeAboutModal.onclick = function () {
@@ -202,8 +241,13 @@ window.onclick = function (event) {
     modalChooseList.style.display = "none";
     modalAbout.style.display = "none";
     modalHelp.style.display = "none";
+    simpBtn.classList.remove("choice-activated");
+    tradBtn.classList.remove("choice-activated");
+    beginTestBtn.classList.add("disabled-button");
   }
 };
+
+// Event Listeners
 
 // Makes sure only one pronunciation choice can be selected at once
 pronChoiceList.forEach((button) => {
@@ -222,7 +266,7 @@ pronChoiceList.forEach((button) => {
       document.querySelector(".pron-choice.choice-activated") &&
       document.querySelector(".mean-choice.choice-activated")
     ) {
-      submitAnswerBtn.textContent = "Submit Answer";
+      submitAnswerBtn.textContent = "Submit";
     } else {
       submitAnswerBtn.textContent = "I don't know";
       console.log("I am getting here");
@@ -249,7 +293,7 @@ meaningChoiceList.forEach((button) => {
       document.querySelector(".pron-choice.choice-activated") &&
       document.querySelector(".mean-choice.choice-activated")
     ) {
-      submitAnswerBtn.textContent = "Submit Answer";
+      submitAnswerBtn.textContent = "Submit";
     } else {
       submitAnswerBtn.textContent = "I don't know";
       console.log("I am getting here");
@@ -257,16 +301,53 @@ meaningChoiceList.forEach((button) => {
   });
 });
 
+// The "submit answer" button actually has a variety of functions depending on the state
 submitAnswerBtn.addEventListener("click", function () {
-  if (submitAnswerBtn.textContent === "I don't know") {
-    // mark it incorrect
-  } else {
+  // The submit button changes to "next" after the user submits an answer. Clicking next generates next prompt.
+  if (submitAnswerBtn.textContent === "Next") {
+    window.scrollTo(0, 0);
+    generatePrompt();
+    return;
+  }
+  // If the user has completed the test, clicking this button will show results
+  if (submitAnswerBtn.textContent === "Show results!") {
+    generateResults();
+  }
+
+  // If the user entered "I don't know", this block is executed, otherwise answers evaluated
+  if (submitAnswerBtn.textContent === "I don't know this hanzi") {
+    correctAnswer = false;
+    pronPrompt.textContent = 'You submitted "I don\'t know" for this hanzi.';
+    meanPrompt.textContent = "";
+  }
+  // Evaluates answer of pronunciation and meaning, correct answer only set if both are correct
+  else {
+    ansPrompt.textContent = "Click next to continue.";
+    submitAnswerBtn.textContent = "Next";
+
     const pronSelection = document.querySelector(
       ".pron-choice.choice-activated"
     ).textContent;
     const meanSelection = document.querySelector(
       ".mean-choice.choice-activated"
     ).textContent;
+
+    // Check pronunciation for correctness
+    if (currentCorrectHanzi.pronunciation == pronSelection) {
+      pronPrompt.textContent = "Pronunciation: correct";
+    } else {
+      pronPrompt.textContent = "Pronunciation: incorrect";
+    }
+
+    // Check meaning for correctness
+    if (currentCorrectHanzi.meaning == meanSelection) {
+      meanPrompt.textContent = "Definition: correct";
+    } else {
+      meanPrompt.textContent = "Definition: incorrect";
+    }
+
+    // Evaluates total answer for correctness.
+    // Answers are only correct if user selected correct pronunciation and meaning
     if (
       currentCorrectHanzi.pronunciation == pronSelection &&
       currentCorrectHanzi.meaning == meanSelection
@@ -277,6 +358,24 @@ submitAnswerBtn.addEventListener("click", function () {
       console.log("Incorrect answer :(");
       correctAnswer = false;
     }
-    calculateRange();
   }
+  ansPrompt.textContent = "Click next to continue.";
+  submitAnswerBtn.textContent = "Next";
+  calculateRange();
+});
+
+simpBtn.addEventListener("click", function () {
+  tradBtn.classList.remove("choice-activated");
+  simpBtn.classList.add("choice-activated");
+  beginTestBtn.classList.remove("disabled-button");
+});
+
+tradBtn.addEventListener("click", function () {
+  simpBtn.classList.remove("choice-activated");
+  tradBtn.classList.add("choice-activated");
+  beginTestBtn.classList.remove("disabled-button");
+});
+
+beginTestBtn.addEventListener("click", function () {
+  initializeTest();
 });

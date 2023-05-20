@@ -106,7 +106,7 @@ const hanziList = [
     traditional: "以",
     pronunciation: "yǐ",
     meaning:
-      "to use / by means of / according to / in order to / because of / at (a certain date or place)",
+      "to use; by means of; according to; in order to; because of; at (a certain date or place)",
   },
   {
     simplified: "这",
@@ -164,7 +164,7 @@ const hanziList = [
     traditional: "就",
     pronunciation: "jiù",
     meaning:
-      "at once / right away / only / just (emphasis) / as early as / already / as soon as / then / in that case / as many as / even if / to approach / to move towards / to undertake / to engage in / to suffer / subjected to / to accomplish / to take advantage of / to go with (of foods) / with regard to / concerning",
+      "at once; right away; only; just (emphasis); as early as; already; as soon as; then; in that case; as many as; even if; to approach; to move towards; to undertake; to engage in; to suffer; subjected to; to accomplish; to take advantage of; to go with (of foods); with regard to; concerning",
   },
   {
     simplified: "学",
@@ -217,7 +217,7 @@ const hanziList = [
     simplified: "时",
     traditional: "時",
     pronunciation: "shí",
-    meaning: "o'clock / time / when / hour / season / period",
+    meaning: "o'clock; time; when; hour; season; period",
   },
   {
     simplified: "没",
@@ -580,14 +580,14 @@ const hanziList = [
   {
     simplified: "当",
     traditional: "當",
-    pronunciation: "dāng / dàng",
-    meaning: "ought to; when; serve as / proper; pawn",
+    pronunciation: "dāng; dàng",
+    meaning: "ought to; when; serve as; proper; pawn",
   },
   {
     simplified: "于",
     traditional: "於",
     pronunciation: "yú",
-    meaning: "in / at / to / from / by / than / out of",
+    meaning: "in; at; to; from; by; than; out of",
   },
   {
     simplified: "本",
@@ -666,7 +666,7 @@ const hanziList = [
     traditional: "意",
     pronunciation: "yì",
     meaning:
-      "Italy; Italian; abbr. for 意大利 ; idea; meaning; thought; to think; wish; desire; intention; to expect; to anticipate",
+      "idea; meaning; thought; to think; wish; desire; intention; to expect; to anticipate",
   },
   {
     simplified: "情",
@@ -686,7 +686,7 @@ const hanziList = [
     traditional: "題",
     pronunciation: "tí",
     meaning:
-      "topic / problem for discussion / exam question / subject / to inscribe / to mention / CL: 個｜个, 道",
+      "topic; problem for discussion; exam question; subject; to inscribe; to mention; CL: 個｜个, 道",
   },
   {
     simplified: "其",
@@ -706,7 +706,7 @@ const hanziList = [
     traditional: "方",
     pronunciation: "fāng",
     meaning:
-      "square / power or involution (mathematics) / upright / honest / fair and square / direction / side / party (to a contract, dispute etc) / place / method / prescription (medicine) / just when / only or just / classifier for square things / abbr. for square or cubic meter",
+      "square; power or involution (mathematics); upright; honest; fair and square; direction; side; party (to a contract, dispute etc); place; method; prescription (medicine); just when; only or just; classifier for square things; abbr. for square or cubic meter",
   },
   {
     simplified: "清",
@@ -766,7 +766,7 @@ const hanziList = [
     traditional: "理",
     pronunciation: "lǐ",
     meaning:
-      "texture / grain (of wood) / inner essence / intrinsic order / reason / logic / truth / science / natural science (esp. physics) / to manage / to pay attention to / to run (affairs) / to handle /to put in order / to tidy up",
+      "texture; grain (of wood); inner essence; intrinsic order; reason; logic; truth; science; natural science (esp. physics); to manage; to pay attention to; to run (affairs); to handle;to put in order; to tidy up",
   },
   {
     simplified: "行",
@@ -904,7 +904,7 @@ const hanziList = [
     simplified: "高",
     traditional: "高",
     pronunciation: "gāo",
-    meaning: "high / tall / above average / loud / your (honorific)",
+    meaning: "high; tall; above average; loud; your (honorific)",
   },
   {
     simplified: "面",
@@ -973,8 +973,8 @@ const hanziList = [
   {
     simplified: "分",
     traditional: "分",
-    pronunciation: "fēn / fèn",
-    meaning: "divide; share; one minute / a part, a portion",
+    pronunciation: "fēn; fèn",
+    meaning: "divide; share; one minute; a part, a portion",
   },
   {
     simplified: "手",
@@ -1001,7 +1001,7 @@ const hanziList = [
     traditional: "次",
     pronunciation: "cì",
     meaning:
-      "next in sequence / second / the second (day, time etc) / secondary / vice- / sub- / infra- / inferior quality / substandard / order / sequence / hypo- (chemistry) / classifier for enumerated events: time",
+      "next in sequence; second; the second (day, time etc); secondary; vice-; sub-; infra-; inferior quality; substandard; order; sequence; hypo- (chemistry); classifier for enumerated events: time",
   },
   {
     simplified: "长",
@@ -1020,7 +1020,7 @@ const hanziList = [
     traditional: "明",
     pronunciation: "míng",
     meaning:
-      "bright / opposite: dark 暗 / (of meaning) clear / to understand / next / public or open / wise / generic term for a sacrifice to the gods",
+      "bright; opposite: dark 暗; (of meaning) clear; to understand; next; public or open; wise; generic term for a sacrifice to the gods",
   },
   {
     simplified: "己",
@@ -1034,7 +1034,7 @@ const hanziList = [
     traditional: "路",
     pronunciation: "lù",
     meaning:
-      "road / CL: 條｜条 / journey / route / line (bus etc) / sort / kind",
+      "road; CL: 條｜条; journey; route; line (bus etc); sort; kind",
   },
   {
     simplified: "起",
@@ -1290,13 +1290,13 @@ const hanziList = [
     traditional: "論",
     pronunciation: "lun4",
     meaning:
-      "opinion / view / theory / doctrine / to discuss / to talk about / to regard / to consider / per / by the (kilometer, hour etc)",
+      "opinion; view; theory; doctrine; to discuss; to talk about; to regard; to consider; per; by the (kilometer, hour etc)",
   },
   {
     simplified: "及",
     traditional: "及",
     pronunciation: "jí",
-    meaning: "and / to reach / up to / in time for",
+    meaning: "and; to reach; up to; in time for",
   },
   {
     simplified: "别",
@@ -1317,7 +1317,7 @@ const hanziList = [
     traditional: "聽",
     pronunciation: "tīng",
     meaning:
-      'to listen / to hear / to obey / a can (loanword from English "tin") / classifier for canned beverages',
+      'to listen; to hear; to obey; a can (loanword from English "tin"); classifier for canned beverages',
   },
   {
     simplified: "水",
@@ -1355,7 +1355,7 @@ const hanziList = [
     simplified: "里",
     traditional: "裡",
     pronunciation: "lǐ",
-    meaning: "lining / interior / inside / internal / also written 裏｜里",
+    meaning: "lining; interior; inside; internal; also written 裏｜里",
   },
   {
     simplified: "常",
@@ -1375,7 +1375,7 @@ const hanziList = [
     simplified: "风",
     traditional: "風",
     pronunciation: "fēng",
-    meaning: "wind / news / style / custom / manner / CL: 陣｜阵, 絲｜丝",
+    meaning: "wind; news; style; custom; manner; CL: 陣｜阵, 絲｜丝",
   },
   {
     simplified: "您",
@@ -1405,8 +1405,8 @@ const hanziList = [
   {
     simplified: "解",
     traditional: "解",
-    pronunciation: "jiě / jiè / xiè",
-    meaning: "untie; sove / send under guard / a surname",
+    pronunciation: "jiě; jiè; xiè",
+    meaning: "untie; sove; send under guard; a surname",
   },
   {
     simplified: "等",
@@ -1452,7 +1452,7 @@ const hanziList = [
     traditional: "管",
     pronunciation: "guǎn",
     meaning:
-      "to take care (of) / to control / to manage / to be in charge of / to look after / to run / to care about / tube / pipe / woodwind / classifier for tube-shaped objects / particle similar to 把in 管...叫 constructions / writing brush / (coll.) to / towards",
+      "to take care (of); to control; to manage; to be in charge of; to look after; to run; to care about; tube; pipe; woodwind; classifier for tube-shaped objects; particle similar to 把in 管...叫 constructions; writing brush; (coll.) to; towards",
   },
   {
     simplified: "区",
@@ -1597,7 +1597,7 @@ const hanziList = [
     simplified: "欢",
     traditional: "歡",
     pronunciation: "huān",
-    meaning: "joyous / happy / pleased",
+    meaning: "joyous; happy; pleased",
   },
   {
     simplified: "数",
@@ -1669,7 +1669,7 @@ const hanziList = [
     simplified: "几",
     traditional: "幾",
     pronunciation: "jǐ",
-    meaning: "how much / how many / several / a few",
+    meaning: "how much; how many; several; a few",
   },
   {
     simplified: "社",
@@ -1830,7 +1830,7 @@ const hanziList = [
     simplified: "言",
     traditional: "言",
     pronunciation: "yán",
-    meaning: "words / speech / to say / to talk",
+    meaning: "words; speech; to say; to talk",
   },
   {
     simplified: "政",
@@ -2070,7 +2070,7 @@ const hanziList = [
     traditional: "神",
     pronunciation: "shén",
     meaning:
-      "deity / soul / spirit / unusual / mysterious / lively / expressive / expression / look / CL: 個｜个 / (slang) awesome / amazing",
+      "deity; soul; spirit; unusual; mysterious; lively; expressive; expression; look; CL: 個｜个; (slang) awesome; amazing",
   },
   {
     simplified: "化",
@@ -2150,7 +2150,7 @@ const hanziList = [
     traditional: "任",
     pronunciation: "rèn",
     meaning:
-      "to assign / to appoint / to take up a post / office / responsibility / to let / to allow / to give free rein to / no matter (how, what etc) / classifier for the number of terms served in office, post, or rank",
+      "to assign; to appoint; to take up a post; office; responsibility; to let; to allow; to give free rein to; no matter (how, what etc); classifier for the number of terms served in office, post, or rank",
   },
   {
     simplified: "跟",
@@ -2169,15 +2169,15 @@ const hanziList = [
   {
     simplified: "空",
     traditional: "空",
-    pronunciation: "kōng / kòng",
-    meaning: "empty, hollow / vacant; empty space; free time",
+    pronunciation: "kōng; kòng",
+    meaning: "empty, hollow; vacant; empty space; free time",
   },
   {
     simplified: "林",
     traditional: "林",
     pronunciation: "lín",
     meaning:
-      "woods / forest / CL: 片 / circle(s) (i.e. specific group of people) / a collection (of similar things)",
+      "woods; forest; CL: 片; circle(s) (i.e. specific group of people); a collection (of similar things)",
   },
   {
     simplified: "士",
@@ -2191,14 +2191,14 @@ const hanziList = [
     traditional: "臺",
     pronunciation: "tái",
     meaning:
-      "platform / stage / terrace / stand / support / station / broadcasting station / classifier for vehicles or machines",
+      "platform; stage; terrace; stand; support; station; broadcasting station; classifier for vehicles or machines",
   },
   {
     simplified: "却",
     traditional: "卻",
     pronunciation: "què",
     meaning:
-      "but / yet / however / while / to go back / to decline / to retreat / nevertheless / even though",
+      "but; yet; however; while; to go back; to decline; to retreat; nevertheless; even though",
   },
   {
     simplified: "北",
@@ -2263,7 +2263,7 @@ const hanziList = [
     traditional: "金",
     pronunciation: "jīn",
     meaning:
-      "gold / chemical element Au / generic term for lustrous and ductile metals / money / golden / highly respected / one of the eight ancient musical instruments 八音",
+      "gold; chemical element Au; generic term for lustrous and ductile metals; money; golden; highly respected; one of the eight ancient musical instruments 八音",
   },
   {
     simplified: "档",
@@ -2349,7 +2349,7 @@ const hanziList = [
     traditional: "利",
     pronunciation: "lì",
     meaning:
-      "sharp / favorable / advantage / benefit / profit / interest / to do good to / to benefit",
+      "sharp; favorable; advantage; benefit; profit; interest; to do good to; to benefit",
   },
   {
     simplified: "强",
@@ -2362,7 +2362,7 @@ const hanziList = [
     traditional: "白",
     pronunciation: "bái",
     meaning:
-      "white / snowy / pure / bright / empty / blank / plain / clear / to make clear / in vain / gratuitous / free of charge / reactionary / anti-communist / funeral / to stare coldly / to write wrong character / to state / to explain / vernacular / spoken lines in opera",
+      "white; snowy; pure; bright; empty; blank; plain; clear; to make clear; in vain; gratuitous; free of charge; reactionary; anti-communist; funeral; to stare coldly; to write wrong character; to state; to explain; vernacular; spoken lines in opera",
   },
   {
     simplified: "价",
@@ -2420,14 +2420,14 @@ const hanziList = [
     simplified: "保",
     traditional: "保",
     pronunciation: "bǎo",
-    meaning: "to defend / to protect / to keep / to guarantee / to ensure",
+    meaning: "to defend; to protect; to keep; to guarantee; to ensure",
   },
   {
     simplified: "花",
     traditional: "花",
     pronunciation: "huā",
     meaning:
-      "flower / blossom / CL: 朵, 支, 束, 把, 盆, 簇 / fancy pattern / florid / to spend (money, time)",
+      "flower; blossom; CL: 朵, 支, 束, 把, 盆, 簇; fancy pattern; florid; to spend (money, time)",
   },
   {
     simplified: "议",
@@ -2479,7 +2479,7 @@ const hanziList = [
     simplified: "万",
     traditional: "萬",
     pronunciation: "wàn",
-    meaning: "ten thousand / a great number",
+    meaning: "ten thousand; a great number",
   },
   {
     simplified: "未",
@@ -2569,9 +2569,9 @@ const hanziList = [
   {
     simplified: "曾",
     traditional: "曾",
-    pronunciation: "zēng / céng",
+    pronunciation: "zēng; céng",
     meaning:
-      "relationship between two generations apart; a surname / ever, once",
+      "relationship between two generations apart; a surname; ever, once",
   },
   {
     simplified: "标",
@@ -2671,7 +2671,7 @@ const hanziList = [
     simplified: "线",
     traditional: "線",
     pronunciation: "xiàn",
-    meaning: "thread / string / wire / line",
+    meaning: "thread; string; wire; line",
   },
   {
     simplified: "语",
@@ -2696,7 +2696,7 @@ const hanziList = [
     simplified: "视",
     traditional: "視",
     pronunciation: "shì",
-    meaning: "to look at / to regard / to inspect",
+    meaning: "to look at; to regard; to inspect",
   },
   {
     simplified: "朋",
@@ -2864,7 +2864,7 @@ const hanziList = [
     traditional: "幫",
     pronunciation: "bāng",
     meaning:
-      "to help / to assist / to support / for sb (i.e. as a help) / hired (as worker) / side (of pail, boat etc) / outer layer / upper (of a shoe) / group / gang / clique / party / secret society",
+      "to help; to assist; to support; for sb (i.e. as a help); hired (as worker); side (of pail, boat etc); outer layer; upper (of a shoe); group; gang; clique; party; secret society",
   },
   {
     simplified: "形",
@@ -2876,7 +2876,7 @@ const hanziList = [
     simplified: "确",
     traditional: "確",
     pronunciation: "què",
-    meaning: "authenticated / solid / firm / real / true",
+    meaning: "authenticated; solid; firm; real; true",
   },
   {
     simplified: "候",
@@ -2902,7 +2902,7 @@ const hanziList = [
     simplified: "备",
     traditional: "備",
     pronunciation: "bèi",
-    meaning: "to prepare / get ready / to provide or equip",
+    meaning: "to prepare; get ready; to provide or equip",
   },
   {
     simplified: "歌",
@@ -2970,7 +2970,7 @@ const hanziList = [
     simplified: "英",
     traditional: "英",
     pronunciation: "yīng",
-    meaning: "hero / outstanding / excellent / (literary) flower / blossom",
+    meaning: "hero; outstanding; excellent; (literary) flower; blossom",
   },
   {
     simplified: "案",
@@ -3152,7 +3152,7 @@ const hanziList = [
     traditional: "班",
     pronunciation: "bān",
     meaning:
-      "team / class / squad / work shift / ranking / CL: 個｜个 / classifier for groups",
+      "team; class; squad; work shift; ranking; CL: 個｜个; classifier for groups",
   },
   {
     simplified: "权",
@@ -3165,7 +3165,7 @@ const hanziList = [
     simplified: "破",
     traditional: "破",
     pronunciation: "yàn",
-    meaning: "to examine / to test / to check",
+    meaning: "to examine; to test; to check",
   },
   {
     simplified: "验",
@@ -3419,7 +3419,7 @@ const hanziList = [
     traditional: "準",
     pronunciation: "zhǔn",
     meaning:
-      "accurate / standard / definitely / certainly / about to become (bride, son-in-law etc) / quasi- / para-",
+      "accurate; standard; definitely; certainly; about to become (bride, son-in-law etc); quasi-; para-",
   },
   {
     simplified: "百",
@@ -3477,13 +3477,13 @@ const hanziList = [
     traditional: "離",
     pronunciation: "lí",
     meaning:
-      "to leave / to part from / to be away from / (in giving distances) from / without (sth) / independent of / one of the Eight Trigrams 八卦, symbolizing fire / ☲",
+      "to leave; to part from; to be away from; (in giving distances) from; without (sth); independent of; one of the Eight Trigrams 八卦, symbolizing fire; ☲",
   },
   {
     simplified: "易",
     traditional: "易",
     pronunciation: "yì",
-    meaning: "easy / amiable / to change / to exchange",
+    meaning: "easy; amiable; to change; to exchange",
   },
   {
     simplified: "往",
@@ -3515,14 +3515,14 @@ const hanziList = [
     traditional: "證",
     pronunciation: "zhèng",
     meaning:
-      "certificate / proof / to prove / to demonstrate / to confirm / variant of 症",
+      "certificate; proof; to prove; to demonstrate; to confirm; variant of 症",
   },
   {
     simplified: "段",
     traditional: "段",
     pronunciation: "duàn",
     meaning:
-      "paragraph / section / segment / stage (of a process) / classifier for stories, periods of time, lengths of thread etc",
+      "paragraph; section; segment; stage (of a process); classifier for stories, periods of time, lengths of thread etc",
   },
   {
     simplified: "导",
@@ -3606,7 +3606,7 @@ const hanziList = [
     traditional: "包",
     pronunciation: "bāo",
     meaning:
-      "to cover / to wrap / to hold / to include / to take charge of / to contract (to or for) / package / wrapper / container / bag / to hold or embrace / bundle / packet / CL: 個｜个, 隻｜只",
+      "to cover; to wrap; to hold; to include; to take charge of; to contract (to or for); package; wrapper; container; bag; to hold or embrace; bundle; packet; CL: 個｜个, 隻｜只",
   },
   {
     simplified: "列",
@@ -3664,7 +3664,7 @@ const hanziList = [
     traditional: "商",
     pronunciation: "shāng",
     meaning:
-      "commerce / merchant / dealer / to consult / 2nd note in pentatonic scale / quotient (as in 智商, intelligence quotient)",
+      "commerce; merchant; dealer; to consult; 2nd note in pentatonic scale; quotient (as in 智商, intelligence quotient)",
   },
   {
     simplified: "根",
@@ -3742,14 +3742,14 @@ const hanziList = [
     traditional: "盡",
     pronunciation: "jìn",
     meaning:
-      "to use up / to exhaust / to end / to finish / to the utmost / exhausted / finished / to the limit (of sth) / all / entirely",
+      "to use up; to exhaust; to end; to finish; to the utmost; exhausted; finished; to the limit (of sth); all; entirely",
   },
   {
     simplified: "据",
     traditional: "據",
     pronunciation: "jù",
     meaning:
-      "according to / to act in accordance with / to depend on / to seize / to occupy",
+      "according to; to act in accordance with; to depend on; to seize; to occupy",
   },
   {
     simplified: "双",
@@ -3840,7 +3840,7 @@ const hanziList = [
     simplified: "云",
     traditional: "雲",
     pronunciation: "yún",
-    meaning: "cloud / CL: 朵",
+    meaning: "cloud; CL: 朵",
   },
   {
     simplified: "游",
@@ -3884,7 +3884,7 @@ const hanziList = [
     simplified: "斯",
     traditional: "斯",
     pronunciation: "sī",
-    meaning: "(phonetic) / this",
+    meaning: "(phonetic); this",
   },
   {
     simplified: "某",
@@ -3993,7 +3993,7 @@ const hanziList = [
     traditional: "畢",
     pronunciation: "bì",
     meaning:
-      "the whole of / to finish / to complete / complete / full / finished",
+      "the whole of; to finish; to complete; complete; full; finished",
   },
   {
     simplified: "节",
@@ -4037,7 +4037,7 @@ const hanziList = [
     simplified: "宝",
     traditional: "寶",
     pronunciation: "bǎo",
-    meaning: "jewel / gem / treasure / precious",
+    meaning: "jewel; gem; treasure; precious",
   },
   {
     simplified: "倒",
@@ -4063,7 +4063,7 @@ const hanziList = [
     simplified: "古",
     traditional: "古",
     pronunciation: "gǔ",
-    meaning: "ancient / old / paleo-",
+    meaning: "ancient; old; paleo-",
   },
   {
     simplified: "输",
@@ -4076,13 +4076,13 @@ const hanziList = [
     traditional: "規",
     pronunciation: "guī",
     meaning:
-      "compass / a rule / regulation / to admonish / to plan / to scheme",
+      "compass; a rule; regulation; to admonish; to plan; to scheme",
   },
   {
     simplified: "福",
     traditional: "福",
     pronunciation: "fú",
-    meaning: "good fortune / happiness / luck",
+    meaning: "good fortune; happiness; luck",
   },
   {
     simplified: "亲",
@@ -4095,7 +4095,7 @@ const hanziList = [
     traditional: "查",
     pronunciation: "chá",
     meaning:
-      "to research / to check / to investigate / to examine / to refer to / to look up (e.g. a word in a dictionary)",
+      "to research; to check; to investigate; to examine; to refer to; to look up (e.g. a word in a dictionary)",
   },
   {
     simplified: "复",
@@ -4116,7 +4116,7 @@ const hanziList = [
     traditional: "舉",
     pronunciation: "jǔ",
     meaning:
-      "to lift / to hold up / to cite / to enumerate / to act / to raise / to choose / to elect / act / move / deed",
+      "to lift; to hold up; to cite; to enumerate; to act; to raise; to choose; to elect; act; move; deed",
   },
   {
     simplified: "鱼",
@@ -4250,7 +4250,7 @@ const hanziList = [
     traditional: "幹",
     pronunciation: "gàn",
     meaning:
-      "tree trunk / main part of sth / to manage / to work / to do / capable / cadre / to kill (slang) / to fuck (vulgar)",
+      "tree trunk; main part of sth; to manage; to work; to do; capable; cadre; to kill (slang); to fuck (vulgar)",
   },
   {
     simplified: "篇",
@@ -4289,7 +4289,7 @@ const hanziList = [
     simplified: "武",
     traditional: "武",
     pronunciation: "wǔ",
-    meaning: "martial / military",
+    meaning: "martial; military",
   },
   {
     simplified: "疑",
@@ -4361,7 +4361,7 @@ const hanziList = [
     traditional: "館",
     pronunciation: "guǎn",
     meaning:
-      "building / shop / term for certain service establishments / embassy or consulate / schoolroom (old) / CL: 家",
+      "building; shop; term for certain service establishments; embassy or consulate; schoolroom (old); CL: 家",
   },
   {
     simplified: "仍",
@@ -4473,7 +4473,7 @@ const hanziList = [
     traditional: "楚",
     pronunciation: "chǔ",
     meaning:
-      "distinct / clear / orderly / pain / suffering / deciduous bush used in Chinese medicine (genus Vitex) / punishment cane (old)",
+      "distinct; clear; orderly; pain; suffering; deciduous bush used in Chinese medicine (genus Vitex); punishment cane (old)",
   },
   {
     simplified: "责",
@@ -4563,7 +4563,7 @@ const hanziList = [
     traditional: "適",
     pronunciation: "shì",
     meaning:
-      "to fit / suitable / proper / just (now) / comfortable / well / to go / to follow or pursue",
+      "to fit; suitable; proper; just (now); comfortable; well; to go; to follow or pursue",
   },
   {
     simplified: "哇",
@@ -4732,7 +4732,7 @@ const hanziList = [
     traditional: "左",
     pronunciation: "zuǒ",
     meaning:
-      "left / the Left (politics) / east / unorthodox / queer / wrong / differing / opposite / variant of 佐",
+      "left; the Left (politics); east; unorthodox; queer; wrong; differing; opposite; variant of 佐",
   },
   {
     simplified: "追",
@@ -4771,7 +4771,7 @@ const hanziList = [
     traditional: "際",
     pronunciation: "jì",
     meaning:
-      "border / edge / boundary / interval / between / inter- / to meet / time / occasion / to meet with (circumstances)",
+      "border; edge; boundary; interval; between; inter-; to meet; time; occasion; to meet with (circumstances)",
   },
   {
     simplified: "遇",
@@ -4809,7 +4809,7 @@ const hanziList = [
     simplified: "康",
     traditional: "康",
     pronunciation: "kāng",
-    meaning: "healthy / peaceful / abundant",
+    meaning: "healthy; peaceful; abundant",
   },
   {
     simplified: "佳",
@@ -4840,7 +4840,7 @@ const hanziList = [
     simplified: "戏",
     traditional: "戲",
     pronunciation: "xì",
-    meaning: "trick / drama / play / show / CL: 出, 場｜场, 臺｜台",
+    meaning: "trick; drama; play; show; CL: 出, 場｜场, 臺｜台",
   },
   {
     simplified: "项",
@@ -4874,7 +4874,7 @@ const hanziList = [
     traditional: "官",
     pronunciation: "guān",
     meaning:
-      "government official / governmental / official / public / organ of the body",
+      "government official; governmental; official; public; organ of the body",
   },
   {
     simplified: "护",
@@ -4899,14 +4899,14 @@ const hanziList = [
   {
     simplified: "石",
     traditional: "石",
-    pronunciation: "shí / dàn",
-    meaning: "stone, rock; a surname / a weight measure for grains",
+    pronunciation: "shí; dàn",
+    meaning: "stone, rock; a surname; a weight measure for grains",
   },
   {
     simplified: "尔",
     traditional: "爾",
     pronunciation: "ěr",
-    meaning: "thus / so / like that / you / thou",
+    meaning: "thus; so; like that; you; thou",
   },
   {
     simplified: "营",
@@ -4920,7 +4920,7 @@ const hanziList = [
     traditional: "歷",
     pronunciation: "lì",
     meaning:
-      "to experience / to undergo / to pass through / all / each / every / history",
+      "to experience; to undergo; to pass through; all; each; every; history",
   },
   {
     simplified: "只",
@@ -4960,7 +4960,7 @@ const hanziList = [
     simplified: "岁",
     traditional: "歲",
     pronunciation: "suì",
-    meaning: "classifier for years (of age) / year / year (of crop harvests)",
+    meaning: "classifier for years (of age); year; year (of crop harvests)",
   },
   {
     simplified: "择",
@@ -5006,7 +5006,7 @@ const hanziList = [
     simplified: "田",
     traditional: "田",
     pronunciation: "tián",
-    meaning: "field / farm / CL: 片",
+    meaning: "field; farm; CL: 片",
   },
   {
     simplified: "养",
@@ -5027,7 +5027,7 @@ const hanziList = [
     traditional: "居",
     pronunciation: "jū",
     meaning:
-      "to reside / to be (in a certain position) / to store up / to be at a standstill / residence / house / restaurant / classifier for bedrooms",
+      "to reside; to be (in a certain position); to store up; to be at a standstill; residence; house; restaurant; classifier for bedrooms",
   },
   {
     simplified: "异",
@@ -5078,7 +5078,7 @@ const hanziList = [
     traditional: "封",
     pronunciation: "fēng",
     meaning:
-      "to confer / to grant / to bestow a title / to seal / classifier for sealed objects, esp. letters",
+      "to confer; to grant; to bestow a title; to seal; classifier for sealed objects, esp. letters",
   },
   {
     simplified: "拜",
@@ -5089,8 +5089,8 @@ const hanziList = [
   {
     simplified: "恶",
     traditional: "惡",
-    pronunciation: "è / wù / ě",
-    meaning: "evil, wicked / loathe, dislike / disgust; sicken",
+    pronunciation: "è; wù; ě",
+    meaning: "evil, wicked; loathe, dislike; disgust; sicken",
   },
   {
     simplified: "啥",
@@ -5164,20 +5164,20 @@ const hanziList = [
     simplified: "良",
     traditional: "良",
     pronunciation: "liáng",
-    meaning: "good / very / very much",
+    meaning: "good; very; very much",
   },
   {
     simplified: "剧",
     traditional: "劇",
     pronunciation: "jù",
     meaning:
-      "theatrical work (play, opera, TV series etc) / dramatic (change, increase etc) / acute / severe",
+      "theatrical work (play, opera, TV series etc); dramatic (change, increase etc); acute; severe",
   },
   {
     simplified: "牛",
     traditional: "牛",
     pronunciation: "niú",
-    meaning: "ox / cow / bull / CL: 條｜条, 頭｜头 / (slang) awesome",
+    meaning: "ox; cow; bull; CL: 條｜条, 頭｜头; (slang) awesome",
   },
   {
     simplified: "垒",
@@ -5237,7 +5237,7 @@ const hanziList = [
     traditional: "詞",
     pronunciation: "cí",
     meaning:
-      "word / statement / speech / lyrics / CL: 組｜组, 個｜个 / classical Chinese poem / CL: 首",
+      "word; statement; speech; lyrics; CL: 組｜组, 個｜个; classical Chinese poem; CL: 首",
   },
   {
     simplified: "亚",
@@ -5288,7 +5288,7 @@ const hanziList = [
     simplified: "厂",
     traditional: "廠",
     pronunciation: "chǎng",
-    meaning: "factory / yard / depot / workhouse / works / (industrial) plant",
+    meaning: "factory; yard; depot; workhouse; works; (industrial) plant",
   },
   {
     simplified: "爽",
@@ -5341,7 +5341,7 @@ const hanziList = [
     simplified: "江",
     traditional: "江",
     pronunciation: "jiāng",
-    meaning: "river / CL: 條｜条, 道",
+    meaning: "river; CL: 條｜条, 道",
   },
   {
     simplified: "宿",
@@ -5426,13 +5426,13 @@ const hanziList = [
     traditional: "宗",
     pronunciation: "zōng",
     meaning:
-      "school / sect / purpose / model / ancestor / clan / to take as one's model (in academic or artistic work) / classifier for batches, items, cases (medical or legal), reservoirs",
+      "school; sect; purpose; model; ancestor; clan; to take as one's model (in academic or artistic work); classifier for batches, items, cases (medical or legal), reservoirs",
   },
   {
     simplified: "普",
     traditional: "普",
     pronunciation: "pǔ",
-    meaning: "general / popular / everywhere / universal",
+    meaning: "general; popular; everywhere; universal",
   },
   {
     simplified: "登",
@@ -5486,13 +5486,13 @@ const hanziList = [
     simplified: "杂",
     traditional: "雜",
     pronunciation: "zá",
-    meaning: "mixed / miscellaneous / various / to mix",
+    meaning: "mixed; miscellaneous; various; to mix",
   },
   {
     simplified: "创",
     traditional: "創",
-    pronunciation: "chuàng / chuāng",
-    meaning: "establish; create / wound",
+    pronunciation: "chuàng; chuāng",
+    meaning: "establish; create; wound",
   },
   {
     simplified: "旧",
@@ -5510,14 +5510,14 @@ const hanziList = [
     simplified: "幸",
     traditional: "幸",
     pronunciation: "xìng",
-    meaning: "fortunate / lucky",
+    meaning: "fortunate; lucky",
   },
   {
     simplified: "剑",
     traditional: "劍",
     pronunciation: "jiàn",
     meaning:
-      "double-edged sword / CL: 口, 把 / classifier for blows of a sword",
+      "double-edged sword; CL: 口, 把; classifier for blows of a sword",
   },
   {
     simplified: "亮",
@@ -5650,14 +5650,14 @@ const hanziList = [
     traditional: "周",
     pronunciation: "zhōu",
     meaning:
-      "to make a circuit / to circle / circle / circumference / lap / cycle / complete / all / all over / thorough / to help financially",
+      "to make a circuit; to circle; circle; circumference; lap; cycle; complete; all; all over; thorough; to help financially",
   },
   {
     simplified: "房",
     traditional: "房",
     pronunciation: "fáng",
     meaning:
-      "house / room / CL: 間｜间 / branch of an extended family / classifier for family members (or concubines)",
+      "house; room; CL: 間｜间; branch of an extended family; classifier for family members (or concubines)",
   },
   {
     simplified: "餐",
@@ -5752,7 +5752,7 @@ const hanziList = [
     traditional: "尤",
     pronunciation: "yóu",
     meaning:
-      "outstanding / particularly, especially / a fault / to express discontentment against",
+      "outstanding; particularly, especially; a fault; to express discontentment against",
   },
   {
     simplified: "缺",
@@ -5795,7 +5795,7 @@ const hanziList = [
     traditional: "皮",
     pronunciation: "pí",
     meaning:
-      "leather / skin / fur / CL: 張｜张 / pico- (one trillionth) / naughty",
+      "leather; skin; fur; CL: 張｜张; pico- (one trillionth); naughty",
   },
   {
     simplified: "松",
@@ -5826,7 +5826,7 @@ const hanziList = [
     traditional: "麻",
     pronunciation: "má",
     meaning:
-      "generic name for hemp, flax etc / hemp or flax fiber for textile materials / sesame / CL: 縷｜缕 / (of materials) rough or coarse / pocked / pitted / to have pins and needles or tingling / to feel numb",
+      "generic name for hemp, flax etc; hemp or flax fiber for textile materials; sesame; CL: 縷｜缕; (of materials) rough or coarse; pocked; pitted; to have pins and needles or tingling; to feel numb",
   },
   {
     simplified: "置",
@@ -5936,7 +5936,7 @@ const hanziList = [
     simplified: "莫",
     traditional: "莫",
     pronunciation: "mò",
-    meaning: "do not / there is none who",
+    meaning: "do not; there is none who",
   },
   {
     simplified: "刘",
@@ -5974,7 +5974,7 @@ const hanziList = [
     simplified: "制",
     traditional: "製",
     pronunciation: "zhì",
-    meaning: "to manufacture / to make",
+    meaning: "to manufacture; to make",
   },
   {
     simplified: "尚",
@@ -6026,7 +6026,7 @@ const hanziList = [
     traditional: "毛",
     pronunciation: "máo",
     meaning:
-      "hair / feather / down / wool / mildew / mold / coarse or semifinished / young / raw / careless / unthinking / nervous / scared / (of currency) to devalue or depreciate / classifier for Chinese fractional monetary unit ( = 角 , = one-tenth of a yuan or 10 fen 分)",
+      "hair; feather; down; wool; mildew; mold; coarse or semifinished; young; raw; careless; unthinking; nervous; scared; (of currency) to devalue or depreciate; classifier for Chinese fractional monetary unit ( = 角 , = one-tenth of a yuan or 10 fen 分)",
   },
   {
     simplified: "罪",
@@ -6051,7 +6051,7 @@ const hanziList = [
     simplified: "注",
     traditional: "註",
     pronunciation: "zhù",
-    meaning: "to register / to annotate / note / comment",
+    meaning: "to register; to annotate; note; comment",
   },
   {
     simplified: "归",
@@ -6085,13 +6085,13 @@ const hanziList = [
     traditional: "刀",
     pronunciation: "dāo",
     meaning:
-      "knife / blade / single-edged sword / cutlass / CL: 把 / (slang) dollar (loanword) / classifier for sets of one hundred sheets (of paper) / classifier for knife cuts or stabs",
+      "knife; blade; single-edged sword; cutlass; CL: 把; (slang) dollar (loanword); classifier for sets of one hundred sheets (of paper); classifier for knife cuts or stabs",
   },
   {
     simplified: "皆",
     traditional: "皆",
     pronunciation: "jiē",
-    meaning: "all / each and every / in all cases",
+    meaning: "all; each and every; in all cases",
   },
   {
     simplified: "键",
@@ -6181,7 +6181,7 @@ const hanziList = [
     traditional: "葉",
     pronunciation: "yè",
     meaning:
-      "leaf / page / lobe / (historical) period / classifier for small boats",
+      "leaf; page; lobe; (historical) period; classifier for small boats",
   },
   {
     simplified: "萤",
@@ -6214,7 +6214,7 @@ const hanziList = [
     traditional: "鐘",
     pronunciation: "zhōng",
     meaning:
-      "clock / o'clock / time as measured in hours and minutes / bell / CL: 架, 座",
+      "clock; o'clock; time as measured in hours and minutes; bell; CL: 架, 座",
   },
   {
     simplified: "付",
@@ -6343,7 +6343,7 @@ const hanziList = [
     simplified: "纸",
     traditional: "紙",
     pronunciation: "zhǐ",
-    meaning: "paper / CL: 張｜张, 沓 / classifier for documents, letter etc",
+    meaning: "paper; CL: 張｜张, 沓; classifier for documents, letter etc",
   },
   {
     simplified: "暗",
@@ -6362,13 +6362,13 @@ const hanziList = [
     simplified: "努",
     traditional: "努",
     pronunciation: "nǔ",
-    meaning: "to exert / to strive",
+    meaning: "to exert; to strive",
   },
   {
     simplified: "雷",
     traditional: "雷",
     pronunciation: "léi",
-    meaning: "thunder / mine (weapon) / (Internet slang) terrifying / terrific",
+    meaning: "thunder; mine (weapon); (Internet slang) terrifying; terrific",
   },
   {
     simplified: "架",
@@ -6387,7 +6387,7 @@ const hanziList = [
     simplified: "宣",
     traditional: "宣",
     pronunciation: "xuān",
-    meaning: "to declare (publicly) / to announce",
+    meaning: "to declare (publicly); to announce",
   },
   {
     simplified: "逢",
@@ -6436,8 +6436,8 @@ const hanziList = [
   {
     simplified: "划",
     traditional: "劃",
-    pronunciation: "huà / huá",
-    meaning: "delimit, draw / cut surface of",
+    pronunciation: "huà; huá",
+    meaning: "delimit, draw; cut surface of",
   },
   {
     simplified: "伟",
@@ -6449,7 +6449,7 @@ const hanziList = [
     simplified: "岛",
     traditional: "島",
     pronunciation: "dǎo",
-    meaning: "island / CL: 個｜个, 座",
+    meaning: "island; CL: 個｜个, 座",
   },
   {
     simplified: "歉",
@@ -6475,7 +6475,7 @@ const hanziList = [
     traditional: "穿",
     pronunciation: "chuān",
     meaning:
-      "to wear / to put on / to dress / to bore through / to pierce / to perforate / to penetrate / to pass through / to thread",
+      "to wear; to put on; to dress; to bore through; to pierce; to perforate; to penetrate; to pass through; to thread",
   },
   {
     simplified: "详",
@@ -6488,7 +6488,7 @@ const hanziList = [
     traditional: "沙",
     pronunciation: "shā",
     meaning:
-      "granule / hoarse / raspy / sand / powder / CL: 粒 / abbr. for Tsar or Tsarist Russia",
+      "granule; hoarse; raspy; sand; powder; CL: 粒; abbr. for Tsar or Tsarist Russia",
   },
   {
     simplified: "督",
@@ -6500,7 +6500,7 @@ const hanziList = [
     simplified: "梅",
     traditional: "梅",
     pronunciation: "méi",
-    meaning: "plum / plum flower / Japanese apricot (Prunus mume)",
+    meaning: "plum; plum flower; Japanese apricot (Prunus mume)",
   },
   {
     simplified: "顾",
@@ -6568,8 +6568,8 @@ const hanziList = [
   {
     simplified: "冲",
     traditional: "衝",
-    pronunciation: "chōng / chòng",
-    meaning: "rush / strong (of smell); vigorously; towards",
+    pronunciation: "chōng; chòng",
+    meaning: "rush; strong (of smell); vigorously; towards",
   },
   {
     simplified: "朝",
@@ -6588,7 +6588,7 @@ const hanziList = [
     simplified: "游",
     traditional: "游",
     pronunciation: "yóu",
-    meaning: "to swim / variant of 遊｜游",
+    meaning: "to swim; variant of 遊｜游",
   },
   {
     simplified: "河",
@@ -6635,7 +6635,7 @@ const hanziList = [
     traditional: "季",
     pronunciation: "jì",
     meaning:
-      "season / the last month of a season / fourth or youngest amongst brothers / classifier for seasonal crop yields",
+      "season; the last month of a season; fourth or youngest amongst brothers; classifier for seasonal crop yields",
   },
   {
     simplified: "散",
@@ -6790,13 +6790,13 @@ const hanziList = [
     traditional: "申",
     pronunciation: "shēn",
     meaning:
-      "to extend / to state / to explain / 9th earthly branch: 3-5 p.m., 7th solar month (7th August-7th September), year of the Monkey / ancient Chinese compass point: 240°",
+      "to extend; to state; to explain; 9th earthly branch: 3-5 p.m., 7th solar month (7th August-7th September), year of the Monkey; ancient Chinese compass point: 240°",
   },
   {
     simplified: "冠",
     traditional: "冠",
-    pronunciation: "guàn / guān",
-    meaning: "precede / crest, comb; hat; corona, crown",
+    pronunciation: "guàn; guān",
+    meaning: "precede; crest, comb; hat; corona, crown",
   },
   {
     simplified: "衣",
@@ -6821,7 +6821,7 @@ const hanziList = [
     traditional: "贊",
     pronunciation: "zàn",
     meaning:
-      "to patronize / to support / to praise / (Internet slang) to like (an online post on Facebook etc)",
+      "to patronize; to support; to praise; (Internet slang) to like (an online post on Facebook etc)",
   },
   {
     simplified: "购",
@@ -6866,7 +6866,7 @@ const hanziList = [
     traditional: "鬥",
     pronunciation: "dòu",
     meaning:
-      "to fight / to struggle / to condemn / to censure / to contend / to put together / coming together",
+      "to fight; to struggle; to condemn; to censure; to contend; to put together; coming together",
   },
   {
     simplified: "徒",
@@ -6892,7 +6892,7 @@ const hanziList = [
     simplified: "绩",
     traditional: "績",
     pronunciation: "jì",
-    meaning: "to spin (hemp etc) / merit / accomplishment / Taiwan pr. [ji1]",
+    meaning: "to spin (hemp etc); merit; accomplishment; Taiwan pr. [ji1]",
   },
   {
     simplified: "笨",
@@ -6994,7 +6994,7 @@ const hanziList = [
     simplified: "祝",
     traditional: "祝",
     pronunciation: "zhù",
-    meaning: "to wish / to express good wishes / to pray / (old) wizard",
+    meaning: "to wish; to express good wishes; to pray; (old) wizard",
   },
   {
     simplified: "序",
@@ -7085,7 +7085,7 @@ const hanziList = [
     traditional: "端",
     pronunciation: "duān",
     meaning:
-      "end / extremity / item / port / to hold sth level with both hands / to carry / regular",
+      "end; extremity; item; port; to hold sth level with both hands; to carry; regular",
   },
   {
     simplified: "移",
@@ -7242,7 +7242,7 @@ const hanziList = [
     simplified: "瑞",
     traditional: "瑞",
     pronunciation: "ruì",
-    meaning: "lucky / auspicious / propitious / rayl (acoustical unit)",
+    meaning: "lucky; auspicious; propitious; rayl (acoustical unit)",
   },
   {
     simplified: "拍",
@@ -7268,7 +7268,7 @@ const hanziList = [
     simplified: "志",
     traditional: "誌",
     pronunciation: "zhì",
-    meaning: "sign / mark / to record / to write a footnote",
+    meaning: "sign; mark; to record; to write a footnote",
   },
   {
     simplified: "透",
@@ -7321,7 +7321,7 @@ const hanziList = [
     traditional: "熊",
     pronunciation: "xióng",
     meaning:
-      "bear / to scold / to rebuke / brilliant light / to shine brightly",
+      "bear; to scold; to rebuke; brilliant light; to shine brightly",
   },
   {
     simplified: "替",
@@ -7391,7 +7391,7 @@ const hanziList = [
     simplified: "米",
     traditional: "米",
     pronunciation: "mǐ",
-    meaning: "rice / CL: 粒 / meter (classifier)",
+    meaning: "rice; CL: 粒; meter (classifier)",
   },
   {
     simplified: "伴",
@@ -7403,7 +7403,7 @@ const hanziList = [
     simplified: "辅",
     traditional: "輔",
     pronunciation: "fǔ",
-    meaning: "to assist / to complement / auxiliary",
+    meaning: "to assist; to complement; auxiliary",
   },
   {
     simplified: "降",
@@ -7511,7 +7511,7 @@ const hanziList = [
     traditional: "藥",
     pronunciation: "yào",
     meaning:
-      "medicine / drug / substance used for a specific purpose (e.g. poisoning, explosion, fermenting) / CL: 種｜种, 服, 味 / to poison",
+      "medicine; drug; substance used for a specific purpose (e.g. poisoning, explosion, fermenting); CL: 種｜种, 服, 味; to poison",
   },
   {
     simplified: "绿",
@@ -7542,7 +7542,7 @@ const hanziList = [
     traditional: "辛",
     pronunciation: "xīn",
     meaning:
-      '(of taste) hot or pungent / hard / laborious / suffering / eighth in order / eighth of the ten Heavenly Stems 十天干 / letter "H" or roman "VIII" in list "A, B, C", or "I, II, III" etc /ancient Chinese compass point: 285° / octa',
+      '(of taste) hot or pungent; hard; laborious; suffering; eighth in order; eighth of the ten Heavenly Stems 十天干; letter "H" or roman "VIII" in list "A, B, C", or "I, II, III" etc;ancient Chinese compass point: 285°; octa',
   },
   {
     simplified: "辈",
@@ -7587,7 +7587,7 @@ const hanziList = [
     traditional: "郎",
     pronunciation: "láng",
     meaning:
-      "(arch.) minister / official / noun prefix denoting function or status / a youth",
+      "(arch.) minister; official; noun prefix denoting function or status; a youth",
   },
   {
     simplified: "泡",
@@ -7607,7 +7607,7 @@ const hanziList = [
     traditional: "蘇",
     pronunciation: "sū",
     meaning:
-      "Perilla frutescens (Chinese basil or wild red basil) / place name / to revive / used as phonetic in transliteration",
+      "Perilla frutescens (Chinese basil or wild red basil); place name; to revive; used as phonetic in transliteration",
   },
   {
     simplified: "缩",
@@ -7894,7 +7894,7 @@ const hanziList = [
     simplified: "危",
     traditional: "危",
     pronunciation: "wēi",
-    meaning: "danger / to endanger / Taiwan pr. [wei2]",
+    meaning: "danger; to endanger; Taiwan pr. [wei2]",
   },
   {
     simplified: "占",
@@ -7937,7 +7937,7 @@ const hanziList = [
     simplified: "阶",
     traditional: "階",
     pronunciation: "jiē",
-    meaning: "rank or step / stairs",
+    meaning: "rank or step; stairs",
   },
   {
     simplified: "夏",
@@ -7988,7 +7988,7 @@ const hanziList = [
     simplified: "丰",
     traditional: "豐",
     pronunciation: "fēng",
-    meaning: "abundant / plentiful / fertile / plump / great",
+    meaning: "abundant; plentiful; fertile; plump; great",
   },
   {
     simplified: "旅",
@@ -8071,7 +8071,7 @@ const hanziList = [
     traditional: "刊",
     pronunciation: "kān",
     meaning:
-      "to print / to publish / publication / periodical / to peel with a knife / to carve / to amend",
+      "to print; to publish; publication; periodical; to peel with a knife; to carve; to amend",
   },
   {
     simplified: "邮",
@@ -8175,7 +8175,7 @@ const hanziList = [
     simplified: "洪",
     traditional: "洪",
     pronunciation: "hóng",
-    meaning: "flood / big / great",
+    meaning: "flood; big; great",
   },
   {
     simplified: "织",
@@ -8187,7 +8187,7 @@ const hanziList = [
     simplified: "询",
     traditional: "詢",
     pronunciation: "xún",
-    meaning: "to ask about / to inquire about",
+    meaning: "to ask about; to inquire about",
   },
   {
     simplified: "振",
@@ -8228,20 +8228,20 @@ const hanziList = [
     traditional: "席",
     pronunciation: "xí",
     meaning:
-      "woven mat / seat / banquet / place in a democratic assembly / classifier for banquets, conversations etc",
+      "woven mat; seat; banquet; place in a democratic assembly; classifier for banquets, conversations etc",
   },
   {
     simplified: "喵",
     traditional: "喵",
     pronunciation: "miāo",
-    meaning: "(onom.) meow / cat's mewing",
+    meaning: "(onom.) meow; cat's mewing",
   },
   {
     simplified: "胡",
     traditional: "胡",
     pronunciation: "hú",
     meaning:
-      "non-Han people, esp. from central Asia / reckless / outrageous / what? / why? / to complete a winning hand at mahjong (also written 和)",
+      "non-Han people, esp. from central Asia; reckless; outrageous; what?; why?; to complete a winning hand at mahjong (also written 和)",
   },
   {
     simplified: "租",
@@ -8436,7 +8436,7 @@ const hanziList = [
     traditional: "莊",
     pronunciation: "zhuāng",
     meaning:
-      "farmstead / village / manor / place of business / banker (in a gambling game) / grave or solemn / holdings of a landlord (in imperial China)",
+      "farmstead; village; manor; place of business; banker (in a gambling game); grave or solemn; holdings of a landlord (in imperial China)",
   },
   {
     simplified: "副",
@@ -8501,7 +8501,7 @@ const hanziList = [
     simplified: "祖",
     traditional: "祖",
     pronunciation: "zǔ",
-    meaning: "ancestor / forefather / grandparents",
+    meaning: "ancestor; forefather; grandparents",
   },
   {
     simplified: "遍",
@@ -8545,7 +8545,7 @@ const hanziList = [
     simplified: "发",
     traditional: "髮",
     pronunciation: "fà",
-    meaning: "hair / Taiwan pr. [fa3]",
+    meaning: "hair; Taiwan pr. [fa3]",
   },
   {
     simplified: "延",
@@ -8563,7 +8563,7 @@ const hanziList = [
     simplified: "隆",
     traditional: "隆",
     pronunciation: "lóng",
-    meaning: "grand / intense / prosperous / to swell / to bulge",
+    meaning: "grand; intense; prosperous; to swell; to bulge",
   },
   {
     simplified: "盟",
@@ -8678,7 +8678,7 @@ const hanziList = [
     simplified: "升",
     traditional: "昇",
     pronunciation: "shēng",
-    meaning: "variant of 升 / to ascend / to rise in rank",
+    meaning: "variant of 升; to ascend; to rise in rank",
   },
   {
     simplified: "胖",
@@ -8691,7 +8691,7 @@ const hanziList = [
     traditional: "丁",
     pronunciation: "dīng",
     meaning:
-      'fourth of the ten Heavenly Stems 十天干 / fourth in order / letter "D" or roman "IV" in list "A, B, C", or "I, II, III" etc / ancient Chinese compass point: 195° / butyl / cubes (of food)',
+      'fourth of the ten Heavenly Stems 十天干; fourth in order; letter "D" or roman "IV" in list "A, B, C", or "I, II, III" etc; ancient Chinese compass point: 195°; butyl; cubes (of food)',
   },
   {
     simplified: "妙",
@@ -8835,7 +8835,7 @@ const hanziList = [
     traditional: "擬",
     pronunciation: "nǐ",
     meaning:
-      "to plan to / to draft (a plan) / to imitate / to assess / to compare / pseudo-",
+      "to plan to; to draft (a plan); to imitate; to assess; to compare; pseudo-",
   },
   {
     simplified: "寝",
@@ -8986,14 +8986,14 @@ const hanziList = [
     simplified: "松",
     traditional: "鬆",
     pronunciation: "sōng",
-    meaning: "loose / to loosen / to relax",
+    meaning: "loose; to loosen; to relax",
   },
   {
     simplified: "戴",
     traditional: "戴",
     pronunciation: "dài",
     meaning:
-      "to put on or wear (glasses, hat, gloves etc) / to respect / to bear / to support",
+      "to put on or wear (glasses, hat, gloves etc); to respect; to bear; to support",
   },
   {
     simplified: "谱",
@@ -9032,7 +9032,7 @@ const hanziList = [
     traditional: "額",
     pronunciation: "é",
     meaning:
-      "forehead / horizontal tablet or inscribed board / specified number or amount",
+      "forehead; horizontal tablet or inscribed board; specified number or amount",
   },
   {
     simplified: "瓜",
@@ -9097,7 +9097,7 @@ const hanziList = [
     traditional: "鬧",
     pronunciation: "nào",
     meaning:
-      "noisy / cacophonous / to make noise / to disturb / to vent (feelings) / to fall ill / to have an attack (of sickness) / to go in (for some activity) / to joke",
+      "noisy; cacophonous; to make noise; to disturb; to vent (feelings); to fall ill; to have an attack (of sickness); to go in (for some activity); to joke",
   },
   {
     simplified: "佩",
@@ -9115,7 +9115,7 @@ const hanziList = [
     simplified: "徐",
     traditional: "徐",
     pronunciation: "xú",
-    meaning: "slowly / gently",
+    meaning: "slowly; gently",
   },
   {
     simplified: "尺",
@@ -9146,8 +9146,8 @@ const hanziList = [
   {
     simplified: "盛",
     traditional: "盛",
-    pronunciation: "shèng / chéng",
-    meaning: "flourishing; a surname / fill",
+    pronunciation: "shèng; chéng",
+    meaning: "flourishing; a surname; fill",
   },
   {
     simplified: "孙",
@@ -9255,7 +9255,7 @@ const hanziList = [
     traditional: "伍",
     pronunciation: "wǔ",
     meaning:
-      "squad of five soldiers / to associate with / five (banker's anti-fraud numeral)",
+      "squad of five soldiers; to associate with; five (banker's anti-fraud numeral)",
   },
   {
     simplified: "溪",
@@ -9273,14 +9273,14 @@ const hanziList = [
     simplified: "泰",
     traditional: "泰",
     pronunciation: "tài",
-    meaning: "safe / peaceful / most / grand",
+    meaning: "safe; peaceful; most; grand",
   },
   {
     simplified: "宋",
     traditional: "宋",
     pronunciation: "Sòng",
     meaning:
-      "surname Song / the Song dynasty (960-1279) / also Song of the Southern dynasties 南朝宋 (420-479)",
+      "surname Song; the Song dynasty (960-1279); also Song of the Southern dynasties 南朝宋 (420-479)",
   },
   {
     simplified: "圈",
@@ -9566,7 +9566,7 @@ const hanziList = [
     traditional: "麵",
     pronunciation: "miàn",
     meaning:
-      "flour / noodles / (of food) soft (not crunchy) / (slang) (of a person) ineffectual / spineless",
+      "flour; noodles; (of food) soft (not crunchy); (slang) (of a person) ineffectual; spineless",
   },
   {
     simplified: "殊",
@@ -9580,7 +9580,7 @@ const hanziList = [
     traditional: "憑",
     pronunciation: "píng",
     meaning:
-      "to lean against / to rely on / on the basis of / no matter (how, what etc) / proof",
+      "to lean against; to rely on; on the basis of; no matter (how, what etc); proof",
   },
   {
     simplified: "拒",
@@ -9592,7 +9592,7 @@ const hanziList = [
     simplified: "池",
     traditional: "池",
     pronunciation: "chí",
-    meaning: "pond / reservoir / moat",
+    meaning: "pond; reservoir; moat",
   },
   {
     simplified: "邪",
@@ -9611,7 +9611,7 @@ const hanziList = [
     simplified: "驱",
     traditional: "驅",
     pronunciation: "qū",
-    meaning: "to expel / to urge on / to drive / to run quickly",
+    meaning: "to expel; to urge on; to drive; to run quickly",
   },
   {
     simplified: "裁",
@@ -9784,7 +9784,7 @@ const hanziList = [
     traditional: "齋",
     pronunciation: "zhāi",
     meaning:
-      "to fast or abstain from meat, wine etc / vegetarian diet / study room / building / to give alms (to a monk)",
+      "to fast or abstain from meat, wine etc; vegetarian diet; study room; building; to give alms (to a monk)",
   },
   {
     simplified: "芬",
@@ -9809,19 +9809,19 @@ const hanziList = [
     simplified: "舒",
     traditional: "舒",
     pronunciation: "shū",
-    meaning: "to stretch / to unfold / to relax / leisurely",
+    meaning: "to stretch; to unfold; to relax; leisurely",
   },
   {
     simplified: "饮",
     traditional: "飲",
-    pronunciation: "yǐn / yìn",
-    meaning: "to drink / to give (animals) water to drink",
+    pronunciation: "yǐn; yìn",
+    meaning: "to drink; to give (animals) water to drink",
   },
   {
     simplified: "闭",
     traditional: "閉",
     pronunciation: "bì",
-    meaning: "to close / to stop up / to shut / to obstruct",
+    meaning: "to close; to stop up; to shut; to obstruct",
   },
   {
     simplified: "励",
@@ -9853,13 +9853,13 @@ const hanziList = [
     simplified: "孟",
     traditional: "孟",
     pronunciation: "mèng",
-    meaning: "first month of a season / eldest amongst brothers",
+    meaning: "first month of a season; eldest amongst brothers",
   },
   {
     simplified: "昌",
     traditional: "昌",
     pronunciation: "chāng",
-    meaning: "prosperous / flourishing",
+    meaning: "prosperous; flourishing",
   },
   {
     simplified: "访",
@@ -10058,13 +10058,13 @@ const hanziList = [
     simplified: "衡",
     traditional: "衡",
     pronunciation: "héng",
-    meaning: "to weigh / weight / measure",
+    meaning: "to weigh; weight; measure",
   },
   {
     simplified: "鲜",
     traditional: "鮮",
-    pronunciation: "xiān / xiǎn",
-    meaning: "fresh, tasty; delicacy / little, rare",
+    pronunciation: "xiān; xiǎn",
+    meaning: "fresh, tasty; delicacy; little, rare",
   },
   {
     simplified: "扩",
@@ -10083,7 +10083,7 @@ const hanziList = [
     simplified: "夸",
     traditional: "誇",
     pronunciation: "kuā",
-    meaning: "to boast / to exaggerate / to praise",
+    meaning: "to boast; to exaggerate; to praise",
   },
   {
     simplified: "炮",
@@ -10133,14 +10133,14 @@ const hanziList = [
     simplified: "郁",
     traditional: "鬱",
     pronunciation: "yù",
-    meaning: "dense (growth) / melancholy",
+    meaning: "dense (growth); melancholy",
   },
   {
     simplified: "汪",
     traditional: "汪",
     pronunciation: "wāng",
     meaning:
-      "expanse of water / ooze / (onom.) bark / classifier for liquids: pool, puddle",
+      "expanse of water; ooze; (onom.) bark; classifier for liquids: pool, puddle",
   },
   {
     simplified: "纷",
@@ -10153,7 +10153,7 @@ const hanziList = [
     traditional: "托",
     pronunciation: "tuō",
     meaning:
-      "prop / support (for weight) / rest (e.g. arm rest) / thanks to / to hold in one's hand / to support in one's palm / to give / to base / to commit / to set / Torr (unit of pressure)",
+      "prop; support (for weight); rest (e.g. arm rest); thanks to; to hold in one's hand; to support in one's palm; to give; to base; to commit; to set; Torr (unit of pressure)",
   },
   {
     simplified: "漏",
@@ -10277,13 +10277,13 @@ const hanziList = [
     traditional: "沖",
     pronunciation: "chōng",
     meaning:
-      "(of water) to dash against / to mix with water / to infuse / to rinse / to flush / to develop (a film) / to rise in the air / to clash / to collide with",
+      "(of water) to dash against; to mix with water; to infuse; to rinse; to flush; to develop (a film); to rise in the air; to clash; to collide with",
   },
   {
     simplified: "杜",
     traditional: "杜",
     pronunciation: "dù",
-    meaning: "birchleaf pear (tree) / to stop / to prevent / to restrict",
+    meaning: "birchleaf pear (tree); to stop; to prevent; to restrict",
   },
   {
     simplified: "胸",
@@ -10295,7 +10295,7 @@ const hanziList = [
     simplified: "甘",
     traditional: "甘",
     pronunciation: "gān",
-    meaning: "sweet / willing",
+    meaning: "sweet; willing",
   },
   {
     simplified: "胞",
@@ -10320,13 +10320,13 @@ const hanziList = [
     traditional: "辭",
     pronunciation: "cí",
     meaning:
-      "to resign / to dismiss / to decline / to take leave / ballad (archaic poetic genre) / variant of 詞｜词",
+      "to resign; to dismiss; to decline; to take leave; ballad (archaic poetic genre); variant of 詞｜词",
   },
   {
     simplified: "墙",
     traditional: "牆",
     pronunciation: "qiáng",
-    meaning: "wall / CL: 面, 堵",
+    meaning: "wall; CL: 面, 堵",
   },
   {
     simplified: "凉",
@@ -10364,7 +10364,7 @@ const hanziList = [
     traditional: "脆",
     pronunciation: "cuì",
     meaning:
-      "brittle / fragile / crisp / crunchy / clear and loud voice / neat",
+      "brittle; fragile; crisp; crunchy; clear and loud voice; neat",
   },
   {
     simplified: "喷",
@@ -10414,19 +10414,19 @@ const hanziList = [
     simplified: "筑",
     traditional: "築",
     pronunciation: "zhù",
-    meaning: "to build / to construct / to ram / to hit / Taiwan pr. [zhu2]",
+    meaning: "to build; to construct; to ram; to hit; Taiwan pr. [zhu2]",
   },
   {
     simplified: "孔",
     traditional: "孔",
     pronunciation: "kǒng",
-    meaning: "hole / CL: 個｜个 / classifier for cave dwellings",
+    meaning: "hole; CL: 個｜个; classifier for cave dwellings",
   },
   {
     simplified: "柏",
     traditional: "柏",
     pronunciation: "bǎi",
-    meaning: "cedar / cypress / Taiwan pr. [bo2]",
+    meaning: "cedar; cypress; Taiwan pr. [bo2]",
   },
   {
     simplified: "叭",
@@ -10674,13 +10674,13 @@ const hanziList = [
     traditional: "于",
     pronunciation: "yú",
     meaning:
-      "to go / to take / sentence-final interrogative particle / variant of 於｜于",
+      "to go; to take; sentence-final interrogative particle; variant of 於｜于",
   },
   {
     simplified: "丑",
     traditional: "醜",
     pronunciation: "chǒu",
-    meaning: "shameful / ugly / disgraceful",
+    meaning: "shameful; ugly; disgraceful",
   },
   {
     simplified: "莉",
@@ -10773,8 +10773,8 @@ const hanziList = [
   {
     simplified: "艾",
     traditional: "艾",
-    pronunciation: "ài / yì",
-    meaning: "Chinese mugwort, wormwood; stop; a surname / mow",
+    pronunciation: "ài; yì",
+    meaning: "Chinese mugwort, wormwood; stop; a surname; mow",
   },
   {
     simplified: "胎",
@@ -10846,7 +10846,7 @@ const hanziList = [
     simplified: "巫",
     traditional: "巫",
     pronunciation: "wū",
-    meaning: "witch / wizard / shaman / also pr. [wu2]",
+    meaning: "witch; wizard; shaman; also pr. [wu2]",
   },
   {
     simplified: "弯",
@@ -10889,7 +10889,7 @@ const hanziList = [
     simplified: "唐",
     traditional: "唐",
     pronunciation: "táng",
-    meaning: "to exaggerate / empty / in vain / old variant of 螗",
+    meaning: "to exaggerate; empty; in vain; old variant of 螗",
   },
   {
     simplified: "悠",
@@ -11094,7 +11094,7 @@ const hanziList = [
     traditional: "洛",
     pronunciation: "Luò",
     meaning:
-      "surname Luo / old name of several rivers (in Henan, Shaanxi, Sichuan and Anhui)",
+      "surname Luo; old name of several rivers (in Henan, Shaanxi, Sichuan and Anhui)",
   },
   {
     simplified: "症",
@@ -11301,7 +11301,7 @@ const hanziList = [
     traditional: "翁",
     pronunciation: "wēng",
     meaning:
-      "elderly man / father / father-in-law / neck feathers of a bird (old)",
+      "elderly man; father; father-in-law; neck feathers of a bird (old)",
   },
   {
     simplified: "牲",
@@ -11472,7 +11472,7 @@ const hanziList = [
     simplified: "屠",
     traditional: "屠",
     pronunciation: "tú",
-    meaning: "to slaughter (animals for food) / to massacre",
+    meaning: "to slaughter (animals for food); to massacre",
   },
   {
     simplified: "咪",
@@ -11522,7 +11522,7 @@ const hanziList = [
     simplified: "焦",
     traditional: "焦",
     pronunciation: "jiāo",
-    meaning: "burnt / scorched / charred / worried / anxious / coke",
+    meaning: "burnt; scorched; charred; worried; anxious; coke",
   },
   {
     simplified: "涵",
@@ -11609,7 +11609,7 @@ const hanziList = [
     traditional: "廉",
     pronunciation: "lián",
     meaning:
-      "incorruptible / honest / inexpensive / to investigate (old) / side wall of a traditional Chinese house (old)",
+      "incorruptible; honest; inexpensive; to investigate (old); side wall of a traditional Chinese house (old)",
   },
   {
     simplified: "炎",
@@ -11621,7 +11621,7 @@ const hanziList = [
     simplified: "祸",
     traditional: "禍",
     pronunciation: "huò",
-    meaning: "disaster / misfortune / calamity",
+    meaning: "disaster; misfortune; calamity",
   },
   {
     simplified: "耗",
@@ -11834,7 +11834,7 @@ const hanziList = [
     traditional: "侯",
     pronunciation: "hóu",
     meaning:
-      "marquis, second of the five orders of ancient Chinese nobility 五等爵位 / nobleman or high official",
+      "marquis, second of the five orders of ancient Chinese nobility 五等爵位; nobleman or high official",
   },
   {
     simplified: "玛",
@@ -11885,7 +11885,7 @@ const hanziList = [
     simplified: "凌",
     traditional: "凌",
     pronunciation: "líng",
-    meaning: "to approach / to rise high / thick ice / to insult or maltreat",
+    meaning: "to approach; to rise high; thick ice; to insult or maltreat",
   },
   {
     simplified: "侧",
@@ -11916,7 +11916,7 @@ const hanziList = [
     simplified: "梁",
     traditional: "梁",
     pronunciation: "liáng",
-    meaning: "beam of roof / bridge",
+    meaning: "beam of roof; bridge",
   },
   {
     simplified: "廷",
@@ -12055,7 +12055,7 @@ const hanziList = [
     simplified: "裤",
     traditional: "褲",
     pronunciation: "kù",
-    meaning: "underpants / trousers / pants",
+    meaning: "underpants; trousers; pants",
   },
   {
     simplified: "壳",
@@ -12072,8 +12072,8 @@ const hanziList = [
   {
     simplified: "仇",
     traditional: "仇",
-    pronunciation: "chóu / qiú",
-    meaning: "enmity, enemy / a surname",
+    pronunciation: "chóu; qiú",
+    meaning: "enmity, enemy; a surname",
   },
   {
     simplified: "誉",
@@ -12225,7 +12225,7 @@ const hanziList = [
     simplified: "阔",
     traditional: "闊",
     pronunciation: "kuò",
-    meaning: "rich / wide / broad",
+    meaning: "rich; wide; broad",
   },
   {
     simplified: "泄",
@@ -12543,7 +12543,7 @@ const hanziList = [
     traditional: "秦",
     pronunciation: "Qín",
     meaning:
-      "surname Qin / Qin dynasty (221-207 BC) of the first emperor 秦始皇 / abbr. for 陝西｜陕西",
+      "surname Qin; Qin dynasty (221-207 BC) of the first emperor 秦始皇; abbr. for 陝西｜陕西",
   },
   {
     simplified: "辱",
@@ -12596,7 +12596,7 @@ const hanziList = [
     simplified: "朗",
     traditional: "朗",
     pronunciation: "lǎng",
-    meaning: "clear / bright",
+    meaning: "clear; bright",
   },
   {
     simplified: "笛",
@@ -12709,7 +12709,7 @@ const hanziList = [
     simplified: "鹅",
     traditional: "鵝",
     pronunciation: "é",
-    meaning: "goose / CL: 隻｜只",
+    meaning: "goose; CL: 隻｜只",
   },
   {
     simplified: "痕",
@@ -12815,7 +12815,7 @@ const hanziList = [
     simplified: "脏",
     traditional: "髒",
     pronunciation: "zāng",
-    meaning: "dirty / filthy",
+    meaning: "dirty; filthy",
   },
   {
     simplified: "叔",
@@ -12942,14 +12942,14 @@ const hanziList = [
   {
     simplified: "钻",
     traditional: "鑽",
-    pronunciation: "zuān / zuàn",
-    meaning: "pierce a hole, drill / diamond",
+    pronunciation: "zuān; zuàn",
+    meaning: "pierce a hole, drill; diamond",
   },
   {
     simplified: "厕",
     traditional: "廁",
     pronunciation: "cè",
-    meaning: "restroom / toilet / lavatory",
+    meaning: "restroom; toilet; lavatory",
   },
   {
     simplified: "鹤",
@@ -13054,7 +13054,7 @@ const hanziList = [
     simplified: "燕",
     traditional: "燕",
     pronunciation: "yàn",
-    meaning: "swallow (family Hirundinidae) / old variant of 宴",
+    meaning: "swallow (family Hirundinidae); old variant of 宴",
   },
   {
     simplified: "津",
@@ -13068,7 +13068,7 @@ const hanziList = [
     traditional: "臣",
     pronunciation: "chén",
     meaning:
-      "state official or subject in dynastic China / I, your servant (used in addressing the sovereign) / Kangxi radical 131",
+      "state official or subject in dynastic China; I, your servant (used in addressing the sovereign); Kangxi radical 131",
   },
   {
     simplified: "丧",
@@ -13106,7 +13106,7 @@ const hanziList = [
     simplified: "脉",
     traditional: "脈",
     pronunciation: "mài",
-    meaning: "arteries and veins / vein (on a leaf, insect wing etc)",
+    meaning: "arteries and veins; vein (on a leaf, insect wing etc)",
   },
   {
     simplified: "杉",
@@ -13144,7 +13144,7 @@ const hanziList = [
     simplified: "杆",
     traditional: "桿",
     pronunciation: "gǎn",
-    meaning: "stick / pole / lever / classifier for long objects such as guns",
+    meaning: "stick; pole; lever; classifier for long objects such as guns",
   },
   {
     simplified: "趁",
@@ -13198,8 +13198,8 @@ const hanziList = [
   {
     simplified: "系",
     traditional: "繫",
-    pronunciation: "xì / jì",
-    meaning: "connect; link / fasten; tie",
+    pronunciation: "xì; jì",
+    meaning: "connect; link; fasten; tie",
   },
   {
     simplified: "倦",
@@ -13318,7 +13318,7 @@ const hanziList = [
     traditional: "伏",
     pronunciation: "fú",
     meaning:
-      "to lean over / to fall (go down) / to hide (in ambush) / to conceal oneself / to lie low / hottest days of summer / to submit / to concede defeat / to overcome / to subdue / volt",
+      "to lean over; to fall (go down); to hide (in ambush); to conceal oneself; to lie low; hottest days of summer; to submit; to concede defeat; to overcome; to subdue; volt",
   },
   {
     simplified: "弊",
@@ -13364,13 +13364,13 @@ const hanziList = [
     traditional: "汗",
     pronunciation: "hàn",
     meaning:
-      "perspiration / sweat / CL: 滴, 頭｜头, 身 / to be speechless (out of helplessness, embarrassment etc) (Internet slang used as an interjection)",
+      "perspiration; sweat; CL: 滴, 頭｜头, 身; to be speechless (out of helplessness, embarrassment etc) (Internet slang used as an interjection)",
   },
   {
     simplified: "陶",
     traditional: "陶",
     pronunciation: "táo",
-    meaning: "pottery / pleased",
+    meaning: "pottery; pleased",
   },
   {
     simplified: "栋",
@@ -13413,7 +13413,7 @@ const hanziList = [
     simplified: "并",
     traditional: "併",
     pronunciation: "bìng",
-    meaning: "to combine / to amalgamate",
+    meaning: "to combine; to amalgamate",
   },
   {
     simplified: "泣",
@@ -13431,7 +13431,7 @@ const hanziList = [
     simplified: "柯",
     traditional: "柯",
     pronunciation: "kē",
-    meaning: "tree branch / stem / ax handle",
+    meaning: "tree branch; stem; ax handle",
   },
   {
     simplified: "催",
@@ -13444,14 +13444,14 @@ const hanziList = [
     simplified: "畅",
     traditional: "暢",
     pronunciation: "chàng",
-    meaning: "free / unimpeded / smooth / at ease / free from worry / fluent",
+    meaning: "free; unimpeded; smooth; at ease; free from worry; fluent",
   },
   {
     simplified: "勾",
     traditional: "勾",
     pronunciation: "gōu",
     meaning:
-      "to attract / to arouse / to tick / to strike out / to delineate / to collude / variant of 鉤｜钩, hook",
+      "to attract; to arouse; to tick; to strike out; to delineate; to collude; variant of 鉤｜钩, hook",
   },
   {
     simplified: "樱",
@@ -13464,7 +13464,7 @@ const hanziList = [
     traditional: "阮",
     pronunciation: "Ruǎn",
     meaning:
-      "surname Ruan / small state during the Shang Dynasty (1600-1046 BC) located in the southeast of modern-day Gansu Province",
+      "surname Ruan; small state during the Shang Dynasty (1600-1046 BC) located in the southeast of modern-day Gansu Province",
   },
   {
     simplified: "斥",
@@ -13546,7 +13546,7 @@ const hanziList = [
     simplified: "柴",
     traditional: "柴",
     pronunciation: "chái",
-    meaning: "firewood / lean (of meat) / thin (of a person)",
+    meaning: "firewood; lean (of meat); thin (of a person)",
   },
   {
     simplified: "邓",
@@ -13577,7 +13577,7 @@ const hanziList = [
     simplified: "柜",
     traditional: "櫃",
     pronunciation: "guì",
-    meaning: "cupboard / cabinet / wardrobe",
+    meaning: "cupboard; cabinet; wardrobe",
   },
   {
     simplified: "娟",
@@ -13627,7 +13627,7 @@ const hanziList = [
     traditional: "攜",
     pronunciation: "xié",
     meaning:
-      "to carry / to take along / to bring along / to hold (hands) / also pr. [xi1]",
+      "to carry; to take along; to bring along; to hold (hands); also pr. [xi1]",
   },
   {
     simplified: "芭",
@@ -13689,7 +13689,7 @@ const hanziList = [
     simplified: "叙",
     traditional: "敘",
     pronunciation: "xù",
-    meaning: "to narrate / to chat",
+    meaning: "to narrate; to chat",
   },
   {
     simplified: "吻",
@@ -13818,7 +13818,7 @@ const hanziList = [
     traditional: "曹",
     pronunciation: "cáo",
     meaning:
-      "class or grade / generation / plaintiff and defendant (old) / government department (old)",
+      "class or grade; generation; plaintiff and defendant (old); government department (old)",
   },
   {
     simplified: "纽",
@@ -13845,7 +13845,7 @@ const hanziList = [
     traditional: "喻",
     pronunciation: "yù",
     meaning:
-      "to describe sth as / an analogy / a simile / a metaphor / an allegory",
+      "to describe sth as; an analogy; a simile; a metaphor; an allegory",
   },
   {
     simplified: "绵",
@@ -13943,7 +13943,7 @@ const hanziList = [
     simplified: "御",
     traditional: "禦",
     pronunciation: "yù",
-    meaning: "to defend / to resist",
+    meaning: "to defend; to resist",
   },
   {
     simplified: "谜",
@@ -13980,20 +13980,20 @@ const hanziList = [
     simplified: "潘",
     traditional: "潘",
     pronunciation: "Pān",
-    meaning: "surname Pan / Pan, faun in Greek mythology, son of Hermes",
+    meaning: "surname Pan; Pan, faun in Greek mythology, son of Hermes",
   },
   {
     simplified: "埔",
     traditional: "埔",
-    pronunciation: "bù / pǔ",
-    meaning: "port; wharf; pier / port; flat land next to a river or ocean",
+    pronunciation: "bù; pǔ",
+    meaning: "port; wharf; pier; port; flat land next to a river or ocean",
   },
   {
     simplified: "卜",
     traditional: "卜",
     pronunciation: "bǔ",
     meaning:
-      "to divine / to forecast or estimate / (of a place to live etc) to choose",
+      "to divine; to forecast or estimate; (of a place to live etc) to choose",
   },
   {
     simplified: "占",
@@ -14152,7 +14152,7 @@ const hanziList = [
     simplified: "屈",
     traditional: "屈",
     pronunciation: "qū",
-    meaning: "bent / to feel wronged",
+    meaning: "bent; to feel wronged",
   },
   {
     simplified: "陋",
@@ -14306,7 +14306,7 @@ const hanziList = [
     simplified: "桂",
     traditional: "桂",
     pronunciation: "guì",
-    meaning: "cassia / laurel",
+    meaning: "cassia; laurel",
   },
   {
     simplified: "愤",
@@ -14345,7 +14345,7 @@ const hanziList = [
     traditional: "赫",
     pronunciation: "hè",
     meaning:
-      "awe-inspiring / hertz / abbr. for herz hz 赫茲｜赫兹 (cycles per second)",
+      "awe-inspiring; hertz; abbr. for herz hz 赫茲｜赫兹 (cycles per second)",
   },
   {
     simplified: "谦",
@@ -14357,7 +14357,7 @@ const hanziList = [
     simplified: "汇",
     traditional: "匯",
     pronunciation: "huì",
-    meaning: "to remit / to converge (of rivers) / to exchange",
+    meaning: "to remit; to converge (of rivers); to exchange",
   },
   {
     simplified: "魏",
@@ -14399,7 +14399,7 @@ const hanziList = [
     simplified: "辜",
     traditional: "辜",
     pronunciation: "gū",
-    meaning: "crime / sin",
+    meaning: "crime; sin",
   },
   {
     simplified: "恳",
@@ -14461,7 +14461,7 @@ const hanziList = [
     simplified: "戚",
     traditional: "戚",
     pronunciation: "qī",
-    meaning: "relative / parent / grief / sorrow / battle-axe",
+    meaning: "relative; parent; grief; sorrow; battle-axe",
   },
   {
     simplified: "卓",
@@ -14559,7 +14559,7 @@ const hanziList = [
     simplified: "纠",
     traditional: "糾",
     pronunciation: "jiū",
-    meaning: "to gather together / to investigate / to entangle / to correct",
+    meaning: "to gather together; to investigate; to entangle; to correct",
   },
   {
     simplified: "丛",
@@ -14694,7 +14694,7 @@ const hanziList = [
     simplified: "董",
     traditional: "董",
     pronunciation: "dǒng",
-    meaning: "to supervise / to direct / director",
+    meaning: "to supervise; to direct; director",
   },
   {
     simplified: "淋",
@@ -14737,8 +14737,8 @@ const hanziList = [
   {
     simplified: "殷",
     traditional: "殷",
-    pronunciation: "yīn / yān",
-    meaning: "rich; abundant; courteous; eager; a surname / dark red",
+    pronunciation: "yīn; yān",
+    meaning: "rich; abundant; courteous; eager; a surname; dark red",
   },
   {
     simplified: "润",
@@ -14776,7 +14776,7 @@ const hanziList = [
     simplified: "湿",
     traditional: "濕",
     pronunciation: "shī",
-    meaning: "moist / wet",
+    meaning: "moist; wet",
   },
   {
     simplified: "凑",
@@ -14839,7 +14839,7 @@ const hanziList = [
     traditional: "蕩",
     pronunciation: "dàng",
     meaning:
-      "to wash / to squander / to sweep away / to move / to shake / dissolute / pond",
+      "to wash; to squander; to sweep away; to move; to shake; dissolute; pond",
   },
   {
     simplified: "鼎",
@@ -15029,7 +15029,7 @@ const hanziList = [
     simplified: "丘",
     traditional: "丘",
     pronunciation: "qiū",
-    meaning: "mound / hillock / grave / classifier for fields",
+    meaning: "mound; hillock; grave; classifier for fields",
   },
   {
     simplified: "颠",
@@ -15053,7 +15053,7 @@ const hanziList = [
     simplified: "尹",
     traditional: "尹",
     pronunciation: "yǐn",
-    meaning: "to administer / to oversee / to run / magistrate (old)",
+    meaning: "to administer; to oversee; to run; magistrate (old)",
   },
   {
     simplified: "詗",
@@ -15337,8 +15337,8 @@ const hanziList = [
   {
     simplified: "铺",
     traditional: "鋪",
-    pronunciation: "pù / pū",
-    meaning: "shop; plank bed / extend, spread",
+    pronunciation: "pù; pū",
+    meaning: "shop; plank bed; extend, spread",
   },
   {
     simplified: "凄",
@@ -15383,7 +15383,7 @@ const hanziList = [
     simplified: "詹",
     traditional: "詹",
     pronunciation: "zhān",
-    meaning: "excellent / verbose",
+    meaning: "excellent; verbose",
   },
   {
     simplified: "诠",
@@ -15458,7 +15458,7 @@ const hanziList = [
     simplified: "纤",
     traditional: "纖",
     pronunciation: "xiān",
-    meaning: "fine / delicate / minute",
+    meaning: "fine; delicate; minute",
   },
   {
     simplified: "肃",
@@ -15563,7 +15563,7 @@ const hanziList = [
     simplified: "甄",
     traditional: "甄",
     pronunciation: "zhēn",
-    meaning: "to distinguish / to evaluate",
+    meaning: "to distinguish; to evaluate",
   },
   {
     simplified: "斑",
@@ -15837,7 +15837,7 @@ const hanziList = [
     traditional: "疊",
     pronunciation: "dié",
     meaning:
-      "to fold / to fold over in layers / to furl / to layer / to pile up / to repeat / to duplicate",
+      "to fold; to fold over in layers; to furl; to layer; to pile up; to repeat; to duplicate",
   },
   {
     simplified: "几",
@@ -15967,7 +15967,7 @@ const hanziList = [
     simplified: "郝",
     traditional: "郝",
     pronunciation: "Hǎo",
-    meaning: "ancient place name / surname Hao",
+    meaning: "ancient place name; surname Hao",
   },
   {
     simplified: "珮",
@@ -16016,7 +16016,7 @@ const hanziList = [
     simplified: "砖",
     traditional: "磚",
     pronunciation: "zhuān",
-    meaning: "brick / CL: 塊｜块",
+    meaning: "brick; CL: 塊｜块",
   },
   {
     simplified: "嘘",
@@ -16091,7 +16091,7 @@ const hanziList = [
     simplified: "获",
     traditional: "穫",
     pronunciation: "huò",
-    meaning: "to reap / to harvest",
+    meaning: "to reap; to harvest",
   },
   {
     simplified: "畏",
@@ -16115,7 +16115,7 @@ const hanziList = [
     simplified: "姬",
     traditional: "姬",
     pronunciation: "jī",
-    meaning: "woman / concubine / female entertainer (archaic)",
+    meaning: "woman; concubine; female entertainer (archaic)",
   },
   {
     simplified: "赴",
@@ -16308,7 +16308,7 @@ const hanziList = [
     simplified: "腊",
     traditional: "臘",
     pronunciation: "là",
-    meaning: "12th lunar month / preserved (meat, fish etc)",
+    meaning: "12th lunar month; preserved (meat, fish etc)",
   },
   {
     simplified: "喧",
@@ -16382,7 +16382,7 @@ const hanziList = [
     simplified: "奸",
     traditional: "姦",
     pronunciation: "jiān",
-    meaning: "to fornicate / to defile / adultery / rape",
+    meaning: "to fornicate; to defile; adultery; rape",
   },
   {
     simplified: "廿",
@@ -16703,7 +16703,7 @@ const hanziList = [
     simplified: "向",
     traditional: "嚮",
     pronunciation: "xiàng",
-    meaning: "to tend toward / to guide / variant of 向",
+    meaning: "to tend toward; to guide; variant of 向",
   },
   {
     simplified: "胏",
@@ -16748,7 +16748,7 @@ const hanziList = [
     simplified: "朴",
     traditional: "樸",
     pronunciation: "pǔ",
-    meaning: "plain and simple / Taiwan pr. [pu2]",
+    meaning: "plain and simple; Taiwan pr. [pu2]",
   },
   {
     simplified: "薯",
@@ -16927,7 +16927,7 @@ const hanziList = [
     simplified: "浦",
     traditional: "浦",
     pronunciation: "pǔ",
-    meaning: "river bank / shore / river drainage ditch (old)",
+    meaning: "river bank; shore; river drainage ditch (old)",
   },
   {
     simplified: "迦",
@@ -16996,7 +16996,7 @@ const hanziList = [
     simplified: "饲",
     traditional: "飼",
     pronunciation: "sì",
-    meaning: "to raise / to rear / to feed",
+    meaning: "to raise; to rear; to feed",
   },
   {
     simplified: "爹",
@@ -17217,7 +17217,7 @@ const hanziList = [
     simplified: "竖",
     traditional: "豎",
     pronunciation: "shù",
-    meaning: "to erect / vertical / vertical stroke (in Chinese characters)",
+    meaning: "to erect; vertical; vertical stroke (in Chinese characters)",
   },
   {
     simplified: "惶",
@@ -17439,7 +17439,7 @@ const hanziList = [
     simplified: "汇",
     traditional: "彙",
     pronunciation: "huì",
-    meaning: "class / collection",
+    meaning: "class; collection",
   },
   {
     simplified: "楣",
@@ -17475,7 +17475,7 @@ const hanziList = [
     simplified: "耿",
     traditional: "耿",
     pronunciation: "gěng",
-    meaning: "bright / honest / upright",
+    meaning: "bright; honest; upright",
   },
   {
     simplified: "瞄",
@@ -17536,7 +17536,7 @@ const hanziList = [
     simplified: "克",
     traditional: "剋",
     pronunciation: "kè",
-    meaning: "variant of 克 / to subdue / to overthrow / to restrain",
+    meaning: "variant of 克; to subdue; to overthrow; to restrain",
   },
   {
     simplified: "豆",
@@ -17874,7 +17874,7 @@ const hanziList = [
     simplified: "肖",
     traditional: "肖",
     pronunciation: "xiào",
-    meaning: "similar / resembling / to resemble / to be like",
+    meaning: "similar; resembling; to resemble; to be like",
   },
   {
     simplified: "愈",
@@ -17955,7 +17955,7 @@ const hanziList = [
     traditional: "倪",
     pronunciation: "ní",
     meaning:
-      "(literary) small child / limit / bound / extremity / to differentiate / origin / cause",
+      "(literary) small child; limit; bound; extremity; to differentiate; origin; cause",
   },
   {
     simplified: "筠",
@@ -18055,7 +18055,7 @@ const hanziList = [
     simplified: "崔",
     traditional: "崔",
     pronunciation: "cuī",
-    meaning: "high mountain / precipitous",
+    meaning: "high mountain; precipitous",
   },
   {
     simplified: "贷",
@@ -18068,7 +18068,7 @@ const hanziList = [
     simplified: "胡",
     traditional: "鬍",
     pronunciation: "hú",
-    meaning: "beard / mustache / whiskers",
+    meaning: "beard; mustache; whiskers",
   },
   {
     simplified: "晒",
@@ -18279,14 +18279,14 @@ const hanziList = [
     simplified: "蔚",
     traditional: "蔚",
     pronunciation: "wèi",
-    meaning: "Artemisia japonica / luxuriant / resplendent / impressive",
+    meaning: "Artemisia japonica; luxuriant; resplendent; impressive",
   },
   {
     simplified: "钩",
     traditional: "鉤",
     pronunciation: "gōu",
     meaning:
-      "to hook / to sew / to crochet / hook / check mark or tick / window catch",
+      "to hook; to sew; to crochet; hook; check mark or tick; window catch",
   },
   {
     simplified: "卜",
@@ -18390,7 +18390,7 @@ const hanziList = [
     simplified: "刁",
     traditional: "刁",
     pronunciation: "diāo",
-    meaning: "artful / wicked",
+    meaning: "artful; wicked",
   },
   {
     simplified: "堤",
@@ -18444,7 +18444,7 @@ const hanziList = [
     simplified: "斐",
     traditional: "斐",
     pronunciation: "fěi",
-    meaning: "phonetic fei or fi / elegant / phi (Greek letter Φ, φ)",
+    meaning: "phonetic fei or fi; elegant; phi (Greek letter Φ, φ)",
   },
   {
     simplified: "忿",
@@ -18469,7 +18469,7 @@ const hanziList = [
     simplified: "驴",
     traditional: "驢",
     pronunciation: "lǘ",
-    meaning: "donkey / CL: 頭｜头",
+    meaning: "donkey; CL: 頭｜头",
   },
   {
     simplified: "罕",
@@ -18535,7 +18535,7 @@ const hanziList = [
     simplified: "绣",
     traditional: "繡",
     pronunciation: "xiù",
-    meaning: "to embroider / embroidery",
+    meaning: "to embroider; embroidery",
   },
   {
     simplified: "奕",
@@ -18559,7 +18559,7 @@ const hanziList = [
     simplified: "隶",
     traditional: "隸",
     pronunciation: "lì",
-    meaning: "attached to / scribe",
+    meaning: "attached to; scribe",
   },
   {
     simplified: "蔽",
@@ -18662,7 +18662,7 @@ const hanziList = [
     simplified: "姚",
     traditional: "姚",
     pronunciation: "yáo",
-    meaning: "handsome / good-looking",
+    meaning: "handsome; good-looking",
   },
   {
     simplified: "钞",
@@ -18698,7 +18698,7 @@ const hanziList = [
     simplified: "咸",
     traditional: "鹹",
     pronunciation: "xián",
-    meaning: "salted / salty / stingy / miserly",
+    meaning: "salted; salty; stingy; miserly",
   },
   {
     simplified: "沮",
@@ -18722,7 +18722,7 @@ const hanziList = [
     simplified: "淳",
     traditional: "淳",
     pronunciation: "chún",
-    meaning: "genuine / pure / honest",
+    meaning: "genuine; pure; honest",
   },
   {
     simplified: "丐",
@@ -18899,7 +18899,7 @@ const hanziList = [
     simplified: "囡",
     traditional: "囡",
     pronunciation: "nān",
-    meaning: "child / daughter",
+    meaning: "child; daughter",
   },
   {
     simplified: "阑",
@@ -18980,7 +18980,7 @@ const hanziList = [
     simplified: "馈",
     traditional: "饋",
     pronunciation: "kuì",
-    meaning: "food / to make a present",
+    meaning: "food; to make a present",
   },
   {
     simplified: "垄",
@@ -19018,19 +19018,19 @@ const hanziList = [
     traditional: "穆",
     pronunciation: "mù",
     meaning:
-      "solemn / reverent / calm / burial position in an ancestral tomb (old) / old variant of 默",
+      "solemn; reverent; calm; burial position in an ancestral tomb (old); old variant of 默",
   },
   {
     simplified: "樵",
     traditional: "樵",
     pronunciation: "qiáo",
-    meaning: "firewood / gather wood",
+    meaning: "firewood; gather wood",
   },
   {
     simplified: "阀",
     traditional: "閥",
     pronunciation: "fá",
-    meaning: "powerful individual, family or group / clique / (loanword) valve",
+    meaning: "powerful individual, family or group; clique; (loanword) valve",
   },
   {
     simplified: "弥",
@@ -19144,7 +19144,7 @@ const hanziList = [
     simplified: "虞",
     traditional: "虞",
     pronunciation: "yú",
-    meaning: "to expect / to anticipate / to worry / to cheat",
+    meaning: "to expect; to anticipate; to worry; to cheat",
   },
   {
     simplified: "俯",
@@ -19479,13 +19479,13 @@ const hanziList = [
     simplified: "苟",
     traditional: "苟",
     pronunciation: "gǒu",
-    meaning: "if / supposing / careless / negligent / temporarily",
+    meaning: "if; supposing; careless; negligent; temporarily",
   },
   {
     simplified: "台",
     traditional: "檯",
     pronunciation: "tái",
-    meaning: "desk / table / counter",
+    meaning: "desk; table; counter",
   },
   {
     simplified: "矫",
@@ -19603,19 +19603,19 @@ const hanziList = [
     traditional: "丰",
     pronunciation: "fēng",
     meaning:
-      "luxuriant / buxom / variant of 豐｜丰 / variant of 風｜风 / appearance / charm",
+      "luxuriant; buxom; variant of 豐｜丰; variant of 風｜风; appearance; charm",
   },
   {
     simplified: "虔",
     traditional: "虔",
     pronunciation: "qián",
-    meaning: "to act with reverence / reverent",
+    meaning: "to act with reverence; reverent",
   },
   {
     simplified: "茅",
     traditional: "茅",
     pronunciation: "máo",
-    meaning: "reeds / rushes",
+    meaning: "reeds; rushes",
   },
   {
     simplified: "棠",
@@ -19670,7 +19670,7 @@ const hanziList = [
     simplified: "邵",
     traditional: "邵",
     pronunciation: "Shào",
-    meaning: "surname Shao / place name",
+    meaning: "surname Shao; place name",
   },
   {
     simplified: "筱",
@@ -19774,7 +19774,7 @@ const hanziList = [
     simplified: "裘",
     traditional: "裘",
     pronunciation: "qiú",
-    meaning: "fur / fur coat",
+    meaning: "fur; fur coat",
   },
   {
     simplified: "塌",
@@ -19823,7 +19823,7 @@ const hanziList = [
     traditional: "銜",
     pronunciation: "xián",
     meaning:
-      "bit (of a bridle) / to hold in the mouth / to harbor (feelings) / to link / to accept / rank / title",
+      "bit (of a bridle); to hold in the mouth; to harbor (feelings); to link; to accept; rank; title",
   },
   {
     simplified: "苟",
@@ -20382,7 +20382,7 @@ const hanziList = [
     traditional: "蒞",
     pronunciation: "lì",
     meaning:
-      "to attend (an official function) / to be present / to administer / to approach (esp. as administrator)",
+      "to attend (an official function); to be present; to administer; to approach (esp. as administrator)",
   },
   {
     simplified: "隘",
@@ -20400,7 +20400,7 @@ const hanziList = [
     simplified: "湛",
     traditional: "湛",
     pronunciation: "zhàn",
-    meaning: "deep / clear (water)",
+    meaning: "deep; clear (water)",
   },
   {
     simplified: "昼",
@@ -20693,7 +20693,7 @@ const hanziList = [
     traditional: "禹",
     pronunciation: "Yǔ",
     meaning:
-      "Yu the Great (c. 21st century BC), mythical leader who tamed the floods / surname Yu",
+      "Yu the Great (c. 21st century BC), mythical leader who tamed the floods; surname Yu",
   },
   {
     simplified: "喙",
@@ -20705,13 +20705,13 @@ const hanziList = [
     simplified: "厘",
     traditional: "釐",
     pronunciation: "lí",
-    meaning: "one hundredth / centi-",
+    meaning: "one hundredth; centi-",
   },
   {
     simplified: "袅",
     traditional: "裊",
     pronunciation: "niǎo",
-    meaning: "delicate / graceful",
+    meaning: "delicate; graceful",
   },
   {
     simplified: "亥",
@@ -21119,7 +21119,7 @@ const hanziList = [
     traditional: "牟",
     pronunciation: "móu",
     meaning:
-      "barley / to moo / to seek or obtain / old variant of 侔 / old variant of 眸",
+      "barley; to moo; to seek or obtain; old variant of 侔; old variant of 眸",
   },
   {
     simplified: "糙",
@@ -21253,7 +21253,7 @@ const hanziList = [
     simplified: "困",
     traditional: "睏",
     pronunciation: "kùn",
-    meaning: "sleepy / tired",
+    meaning: "sleepy; tired",
   },
   {
     simplified: "愣",
@@ -21696,7 +21696,7 @@ const hanziList = [
     simplified: "佣",
     traditional: "傭",
     pronunciation: "yōng",
-    meaning: "to hire / to employ / servant / hired laborer / domestic help",
+    meaning: "to hire; to employ; servant; hired laborer; domestic help",
   },
   {
     simplified: "嗓",
@@ -21726,13 +21726,13 @@ const hanziList = [
     simplified: "艳",
     traditional: "艷",
     pronunciation: "yàn",
-    meaning: "colorful / splendid / gaudy / amorous / romantic / to envy",
+    meaning: "colorful; splendid; gaudy; amorous; romantic; to envy",
   },
   {
     simplified: "绷",
     traditional: "繃",
-    pronunciation: "bēng / běng",
-    meaning: "to stretch; taut; to tie; to bind / to have a taut face",
+    pronunciation: "bēng; běng",
+    meaning: "to stretch; taut; to tie; to bind; to have a taut face",
   },
   {
     simplified: "峨",
@@ -21798,7 +21798,7 @@ const hanziList = [
     simplified: "韧",
     traditional: "韌",
     pronunciation: "rèn",
-    meaning: "annealed / pliable but strong / tough / tenacious",
+    meaning: "annealed; pliable but strong; tough; tenacious",
   },
   {
     simplified: "扒",
@@ -21913,7 +21913,7 @@ const hanziList = [
     simplified: "铲",
     traditional: "鏟",
     pronunciation: "chǎn",
-    meaning: "to shovel / to remove / spade / shovel",
+    meaning: "to shovel; to remove; spade; shovel",
   },
   {
     simplified: "蚵",
@@ -21943,7 +21943,7 @@ const hanziList = [
     simplified: "稽",
     traditional: "稽",
     pronunciation: "jī",
-    meaning: "to inspect / to check",
+    meaning: "to inspect; to check",
   },
   {
     simplified: "羹",
@@ -22107,7 +22107,7 @@ const hanziList = [
     simplified: "褚",
     traditional: "褚",
     pronunciation: "zhǔ",
-    meaning: "padding (in garment) / to store up / pocket / Taiwan pr. [chu3]",
+    meaning: "padding (in garment); to store up; pocket; Taiwan pr. [chu3]",
   },
   {
     simplified: "砗",
@@ -22126,7 +22126,7 @@ const hanziList = [
     traditional: "蒲",
     pronunciation: "pú",
     meaning:
-      "refers to various monocotyledonous flowering plants including Acorus calamus and Typha orientalis / common cattail / bullrush",
+      "refers to various monocotyledonous flowering plants including Acorus calamus and Typha orientalis; common cattail; bullrush",
   },
   {
     simplified: "丫",
@@ -22278,7 +22278,7 @@ const hanziList = [
     simplified: "祁",
     traditional: "祁",
     pronunciation: "qí",
-    meaning: "large / vast",
+    meaning: "large; vast",
   },
   {
     simplified: "诟",
@@ -22387,7 +22387,7 @@ const hanziList = [
     simplified: "须",
     traditional: "鬚",
     pronunciation: "xū",
-    meaning: "beard / mustache / feeler (of an insect etc) / tassel",
+    meaning: "beard; mustache; feeler (of an insect etc); tassel",
   },
   {
     simplified: "亢",
@@ -22547,7 +22547,7 @@ const hanziList = [
     simplified: "碱",
     traditional: "鹼",
     pronunciation: "jiǎn",
-    meaning: "base / alkali / soda (chemistry)",
+    meaning: "base; alkali; soda (chemistry)",
   },
   {
     simplified: "俨",
@@ -22640,7 +22640,7 @@ const hanziList = [
     simplified: "鳄",
     traditional: "鱷",
     pronunciation: "è",
-    meaning: "crocodile / alligator",
+    meaning: "crocodile; alligator",
   },
   {
     simplified: "镖",
@@ -22830,7 +22830,7 @@ const hanziList = [
     simplified: "杭",
     traditional: "杭",
     pronunciation: "Háng",
-    meaning: "surname Hang / Hangzhou",
+    meaning: "surname Hang; Hangzhou",
   },
   {
     simplified: "侥",
@@ -22896,7 +22896,7 @@ const hanziList = [
     simplified: "禾",
     traditional: "禾",
     pronunciation: "hé",
-    meaning: "cereal / grain",
+    meaning: "cereal; grain",
   },
   {
     simplified: "瑾",
@@ -23078,7 +23078,7 @@ const hanziList = [
     simplified: "淀",
     traditional: "澱",
     pronunciation: "diàn",
-    meaning: "sediment / precipitate",
+    meaning: "sediment; precipitate",
   },
   {
     simplified: "恸",
@@ -23151,7 +23151,7 @@ const hanziList = [
     simplified: "冉",
     traditional: "冉",
     pronunciation: "rǎn",
-    meaning: "edge of a tortoiseshell / see 冉冉",
+    meaning: "edge of a tortoiseshell; see 冉冉",
   },
   {
     simplified: "甸",
@@ -23379,8 +23379,8 @@ const hanziList = [
   {
     simplified: "崭",
     traditional: "嶄",
-    pronunciation: "chán / zhǎn",
-    meaning: "precipitous / high; very",
+    pronunciation: "chán; zhǎn",
+    meaning: "precipitous; high; very",
   },
   {
     simplified: "踅",
@@ -23581,7 +23581,7 @@ const hanziList = [
     simplified: "娴",
     traditional: "嫻",
     pronunciation: "xián",
-    meaning: "elegant / refined / to be skilled at",
+    meaning: "elegant; refined; to be skilled at",
   },
   {
     simplified: "揪",
@@ -23730,7 +23730,7 @@ const hanziList = [
     simplified: "晏",
     traditional: "晏",
     pronunciation: "yàn",
-    meaning: "late / quiet",
+    meaning: "late; quiet",
   },
   {
     simplified: "诬",
@@ -24299,7 +24299,7 @@ const hanziList = [
     simplified: "同",
     traditional: "仝",
     pronunciation: "tóng",
-    meaning: "(used in given names) / variant of 同",
+    meaning: "(used in given names); variant of 同",
   },
   {
     simplified: "瀛",
@@ -24734,7 +24734,7 @@ const hanziList = [
     simplified: "笺",
     traditional: "箋",
     pronunciation: "jiān",
-    meaning: "letter / note-paper",
+    meaning: "letter; note-paper",
   },
   {
     simplified: "垚",
@@ -24935,7 +24935,7 @@ const hanziList = [
     traditional: "朴",
     pronunciation: "Piáo",
     meaning:
-      "surname Piao / Korean surname 박 (Park, Pak, or Bak) / also pr. [Pu2]",
+      "surname Piao; Korean surname 박 (Park, Pak, or Bak); also pr. [Pu2]",
   },
   {
     simplified: "罔",
@@ -25044,7 +25044,7 @@ const hanziList = [
     simplified: "奚",
     traditional: "奚",
     pronunciation: "xī",
-    meaning: "(literary) what? / where? / why?",
+    meaning: "(literary) what?; where?; why?",
   },
   {
     simplified: "掳",
@@ -25141,7 +25141,7 @@ const hanziList = [
     simplified: "敖",
     traditional: "敖",
     pronunciation: "áo",
-    meaning: "to ramble / to rove / old variant of 熬",
+    meaning: "to ramble; to rove; old variant of 熬",
   },
   {
     simplified: "蜈",
@@ -25308,19 +25308,19 @@ const hanziList = [
     simplified: "蛹",
     traditional: "蛹",
     pronunciation: "yǒng",
-    meaning: "chrysalis / pupa",
+    meaning: "chrysalis; pupa",
   },
   {
     simplified: "骥",
     traditional: "驥",
     pronunciation: "jì",
-    meaning: "thoroughbred horse / refined and virtuous",
+    meaning: "thoroughbred horse; refined and virtuous",
   },
   {
     simplified: "樊",
     traditional: "樊",
     pronunciation: "fán",
-    meaning: "cage / fence",
+    meaning: "cage; fence",
   },
   {
     simplified: "雱",
@@ -25833,7 +25833,7 @@ const hanziList = [
     simplified: "邰",
     traditional: "邰",
     pronunciation: "Tái",
-    meaning: "surname Tai / name of a feudal state",
+    meaning: "surname Tai; name of a feudal state",
   },
   {
     simplified: "悚",
@@ -26143,7 +26143,7 @@ const hanziList = [
     traditional: "閘",
     pronunciation: "zhá",
     meaning:
-      "gear / brake / sluice / lock (on waterway) / electric switch or circuit breaker",
+      "gear; brake; sluice; lock (on waterway); electric switch or circuit breaker",
   },
   {
     simplified: "孺",
@@ -26517,7 +26517,7 @@ const hanziList = [
     simplified: "惬",
     traditional: "愜",
     pronunciation: "qiè",
-    meaning: "cheerful / satisfied",
+    meaning: "cheerful; satisfied",
   },
   {
     simplified: "苞",
@@ -26640,7 +26640,7 @@ const hanziList = [
     traditional: "畝",
     pronunciation: "mǔ",
     meaning:
-      "classifier for fields / unit of area equal to one fifteenth of a hectare",
+      "classifier for fields; unit of area equal to one fifteenth of a hectare",
   },
   {
     simplified: "龊",
@@ -26968,7 +26968,7 @@ const hanziList = [
     simplified: "瘪",
     traditional: "癟",
     pronunciation: "biě",
-    meaning: "deflated / shriveled / sunken / empty",
+    meaning: "deflated; shriveled; sunken; empty",
   },
   {
     simplified: "晌",
@@ -27240,7 +27240,7 @@ const hanziList = [
     simplified: "洼",
     traditional: "窪",
     pronunciation: "wā",
-    meaning: "depression / sunken / swamp",
+    meaning: "depression; sunken; swamp",
   },
   {
     simplified: "嵌",
@@ -27506,7 +27506,7 @@ const hanziList = [
     simplified: "镰",
     traditional: "鐮",
     pronunciation: "lián",
-    meaning: "scythe / sickle",
+    meaning: "scythe; sickle",
   },
   {
     simplified: "鼹",
@@ -27530,7 +27530,7 @@ const hanziList = [
     simplified: "邢",
     traditional: "邢",
     pronunciation: "Xíng",
-    meaning: "surname Xing / place name",
+    meaning: "surname Xing; place name",
   },
   {
     simplified: "呓",
@@ -27644,7 +27644,7 @@ const hanziList = [
     simplified: "飒",
     traditional: "颯",
     pronunciation: "sà",
-    meaning: "sound of wind / valiant / melancholy",
+    meaning: "sound of wind; valiant; melancholy",
   },
   {
     simplified: "喋",
@@ -27960,7 +27960,7 @@ const hanziList = [
     simplified: "慑",
     traditional: "懾",
     pronunciation: "shè",
-    meaning: "afraid / be feared / to fear / to frighten / to intimidate",
+    meaning: "afraid; be feared; to fear; to frighten; to intimidate",
   },
   {
     simplified: "嗟",
@@ -28320,8 +28320,8 @@ const hanziList = [
   {
     simplified: "驮",
     traditional: "馱",
-    pronunciation: "duò / tuó",
-    meaning: "load carried by a pack animal / to carry on one's back",
+    pronunciation: "duò; tuó",
+    meaning: "load carried by a pack animal; to carry on one's back",
   },
   {
     simplified: "铬",
@@ -28357,7 +28357,7 @@ const hanziList = [
     simplified: "癈",
     traditional: "癈",
     pronunciation: "fèi",
-    meaning: "variant of 廢｜废 / disabled",
+    meaning: "variant of 廢｜废; disabled",
   },
   {
     simplified: "虱",
@@ -28638,7 +28638,7 @@ const hanziList = [
     traditional: "鹵",
     pronunciation: "lǔ",
     meaning:
-      "alkaline soil / salt / brine / halogen (chemistry) / crass / stupid",
+      "alkaline soil; salt; brine; halogen (chemistry); crass; stupid",
   },
   {
     simplified: "鮀",
@@ -28651,7 +28651,7 @@ const hanziList = [
     traditional: "滕",
     pronunciation: "Téng",
     meaning:
-      "vassal state of Zhou in Shandong / Teng county in Shandong / surname Teng",
+      "vassal state of Zhou in Shandong; Teng county in Shandong; surname Teng",
   },
   {
     simplified: "荪",
@@ -28675,7 +28675,7 @@ const hanziList = [
     simplified: "臧",
     traditional: "臧",
     pronunciation: "zāng",
-    meaning: "good / right",
+    meaning: "good; right",
   },
   {
     simplified: "峋",
@@ -29105,7 +29105,7 @@ const hanziList = [
     simplified: "缄",
     traditional: "緘",
     pronunciation: "jiān",
-    meaning: "letters / to close / to seal",
+    meaning: "letters; to close; to seal",
   },
   {
     simplified: "诿",
@@ -29802,13 +29802,13 @@ const hanziList = [
     simplified: "兀",
     traditional: "兀",
     pronunciation: "wù",
-    meaning: "cut off the feet / rising to a height / towering / bald",
+    meaning: "cut off the feet; rising to a height; towering; bald",
   },
   {
     simplified: "靳",
     traditional: "靳",
     pronunciation: "jìn",
-    meaning: "martingale / stingy",
+    meaning: "martingale; stingy",
   },
   {
     simplified: "殁",
@@ -29863,7 +29863,7 @@ const hanziList = [
     traditional: "脩",
     pronunciation: "xiū",
     meaning:
-      "dried meat / private teacher's remuneration / withered / variant of 修",
+      "dried meat; private teacher's remuneration; withered; variant of 修",
   },
   {
     simplified: "砾",
@@ -29984,7 +29984,7 @@ const hanziList = [
     traditional: "贛",
     pronunciation: "Gàn",
     meaning:
-      "abbr. for Jiangxi Province 江西省 / Gan River in Jiangxi Province 江西省",
+      "abbr. for Jiangxi Province 江西省; Gan River in Jiangxi Province 江西省",
   },
   {
     simplified: "揩",
@@ -30609,7 +30609,7 @@ const hanziList = [
     simplified: "锉",
     traditional: "銼",
     pronunciation: "cuò",
-    meaning: "file (tool used for smoothing) / rasp / to file",
+    meaning: "file (tool used for smoothing); rasp; to file",
   },
   {
     simplified: "筵",
@@ -31792,7 +31792,7 @@ const hanziList = [
     simplified: "溥",
     traditional: "溥",
     pronunciation: "pǔ",
-    meaning: "extensive / pervading",
+    meaning: "extensive; pervading",
   },
   {
     simplified: "釉",
@@ -31997,7 +31997,7 @@ const hanziList = [
     simplified: "骡",
     traditional: "騾",
     pronunciation: "luó",
-    meaning: "mule / CL: 匹, 頭｜头",
+    meaning: "mule; CL: 匹, 頭｜头",
   },
   {
     simplified: "痾",
@@ -34401,7 +34401,7 @@ const hanziList = [
     simplified: "馔",
     traditional: "饌",
     pronunciation: "zhuàn",
-    meaning: "food / delicacies",
+    meaning: "food; delicacies",
   },
   {
     simplified: "柞",
@@ -34474,7 +34474,7 @@ const hanziList = [
     simplified: "沈",
     traditional: "瀋",
     pronunciation: "shěn",
-    meaning: "liquid / to pour",
+    meaning: "liquid; to pour",
   },
   {
     simplified: "赅",
@@ -34975,7 +34975,7 @@ const hanziList = [
     simplified: "锹",
     traditional: "鍬",
     pronunciation: "qiāo",
-    meaning: "shovel / spade",
+    meaning: "shovel; spade",
   },
   {
     simplified: "擗",
@@ -37321,7 +37321,7 @@ const hanziList = [
     traditional: "耄",
     pronunciation: "mào",
     meaning:
-      "extremely aged (in one's 80s or 90s) / octogenarian / nonagenarian",
+      "extremely aged (in one's 80s or 90s); octogenarian; nonagenarian",
   },
   {
     simplified: "峏",
