@@ -1,5 +1,8 @@
 `use strict`;
 
+// TODO:
+// Test during a test needs to be fixed
+
 // Selecting Elements
 const logo = document.querySelector(".logo");
 const title = document.querySelector(".title");
@@ -23,9 +26,22 @@ const tradBtn = document.querySelector(".traditional-btn");
 const pronPrompt = document.querySelector(".pron-prompt");
 const meanPrompt = document.querySelector(".mean-prompt");
 const ansPrompt = document.querySelector(".ans-prompt");
+const resultString = document.querySelector(".result-string");
+const resultsContainer = document.querySelector(".results");
+const incorrectHanziTextArea = document.querySelector(".incorrect-hanzi");
+const abandonTestBtn = document.querySelector(".abandon-btn");
+const continueTestBtn = document.querySelector(".continue-btn");
+const chooseListDropdown = document.querySelector(".list-dropdown");
+const aboutDropdown = document.querySelector(".about-dropdown");
+const helpDropdown = document.querySelector(".help-dropdown");
+const dropdown = document.querySelector(".dropdown");
+const dropdownToggle = document.querySelector(".menu-toggle");
+
+// Boolean to see if user is currently taking a test
+let testInProgress = false;
 
 // This value will be set by the user when they begin the test to determine whether they are presented simplified or traditional characters
-let simplified = true;
+let simplifiedCharset = true;
 
 // The user must select the pronunciation and meaning which match this hanzi object
 let currentCorrectHanzi;
@@ -41,8 +57,8 @@ let min = 0;
 let max = 500;
 let correctAnswer;
 let triesUntilTestOver = 100;
-const correctAnswers = [];
-const incorrectAnswers = [];
+let correctAnswers = [];
+let incorrectAnswers = [];
 
 function generatePrompt() {
   // Reset the GUI
@@ -76,7 +92,7 @@ function generatePrompt() {
   // Choose one of the Hanzi to be the correct answer
   const correctHanzi =
     hanziArray[Math.floor(Math.random() * hanziArray.length)];
-  hanziPrompt.textContent = simplified
+  hanziPrompt.textContent = simplifiedCharset
     ? correctHanzi.simplified
     : correctHanzi.traditional;
   currentCorrectHanzi = correctHanzi;
@@ -129,9 +145,7 @@ function calculateRange() {
 
   // If user has gone through 100 hanzi, the test is over
   if (totalAnswers >= triesUntilTestOver) {
-    // Test is over, determine user's score
-    // Maybe call a game over function
-    const userScore = estimateSkillLevel();
+    generateResults();
   }
 
   // Otherwise, determine new top and bottom if necessary according to user's current performance
@@ -158,10 +172,42 @@ function calculateRange() {
 }
 
 function initializeTest() {
+  // Update GUI
   introText.classList.add("hidden");
   appContainer.classList.remove("hidden");
   modalChooseList.style.display = "none";
+
+  // Reset state, in case user has done a test before
+  highestCorrectHanzi = 0;
+  lowestIncorrectHanzi = 6000;
+  currentStreak = 0;
+  totalAnswers = 0;
+  correctAnswersThisRound = 0;
+  incorrectAnswersThisRound = 0;
+  min = 0;
+  max = 500;
+  correctAnswer = false;
+  triesUntilTestOver = 100;
+  correctAnswers = [];
+  incorrectAnswers = [];
+
+  testInProgress = true;
   generatePrompt();
+}
+
+function generateResults() {
+  const score = estimateSkillLevel();
+
+  // Update GUI
+  appContainer.classList.add("hidden");
+  resultsContainer.classList.remove("hidden");
+  resultString.textContent = `Wow, you know approximately ${score} Hanzi!`;
+  incorrectAnswers.forEach(
+    (hanziNum) => (incorrectHanziTextArea.value += hanziNum)
+  ); // Fix this line to be the actual hanzi info
+
+  // TODO: Add an SNS sharing thing
+  testInProgress = false;
 }
 
 function estimateSkillLevel() {
@@ -196,14 +242,20 @@ function estimateSkillLevel() {
 const modalChooseList = document.querySelector(".modal-choose-list");
 const modalAbout = document.querySelector(".modal-about");
 const modalHelp = document.querySelector(".modal-help");
+const modalAbandon = document.querySelector(".modal-abandon");
 
 // Get the <span> element that closes the modal
 const closeListModal = document.querySelector(".close-list-modal");
 const closeAboutModal = document.querySelector(".close-about-btn");
 const closeHelpModal = document.querySelector(".close-help-btn");
+const closeAbandonModal = document.querySelector(".close-abandon-btn");
 
 // When the user clicks the link, open the modal
 chooseListLink.onclick = function () {
+  if (testInProgress) {
+    modalAbandon.style.display = "block";
+    return;
+  }
   modalChooseList.style.display = "block";
 };
 
@@ -214,6 +266,28 @@ aboutLink.onclick = function () {
 helpLink.onclick = function () {
   modalHelp.style.display = "block";
 };
+
+// dropdownToggle.addEventListener("click", function () {
+//   dropdown.classList.toggle("show");
+// });
+
+document.addEventListener("click", function (event) {
+  if (event.target.classList.contains("dropdown-item")) {
+    const target = event.target;
+    if (target === chooseListDropdown) {
+      if (testInProgress) {
+        modalAbandon.style.display = "block";
+        return;
+      }
+      modalChooseList.style.display = "block";
+    } else if (target === aboutDropdown) {
+      modalAbout.style.display = "block";
+    } else if (target === helpDropdown) {
+      modalHelp.style.display = "block";
+    }
+    dropdown.classList.remove("show");
+  }
+});
 
 // When the user clicks on <span> (x), close the modal
 closeListModal.onclick = function () {
@@ -231,16 +305,22 @@ closeHelpModal.onclick = function () {
   modalHelp.style.display = "none";
 };
 
+closeAbandonModal.onclick = function () {
+  modalAbandon.style.display = "none";
+};
+
 // When the user clicks anywhere outside of the modal, close it
 window.onclick = function (event) {
   if (
     event.target == modalChooseList ||
     event.target == modalAbout ||
-    event.target == modalHelp
+    event.target == modalHelp ||
+    event.target == modalAbandon
   ) {
     modalChooseList.style.display = "none";
     modalAbout.style.display = "none";
     modalHelp.style.display = "none";
+    modalAbandon.style.display = "none";
     simpBtn.classList.remove("choice-activated");
     tradBtn.classList.remove("choice-activated");
     beginTestBtn.classList.add("disabled-button");
@@ -296,7 +376,6 @@ meaningChoiceList.forEach((button) => {
       submitAnswerBtn.textContent = "Submit";
     } else {
       submitAnswerBtn.textContent = "I don't know";
-      console.log("I am getting here");
     }
   });
 });
@@ -322,9 +401,6 @@ submitAnswerBtn.addEventListener("click", function () {
   }
   // Evaluates answer of pronunciation and meaning, correct answer only set if both are correct
   else {
-    ansPrompt.textContent = "Click next to continue.";
-    submitAnswerBtn.textContent = "Next";
-
     const pronSelection = document.querySelector(
       ".pron-choice.choice-activated"
     ).textContent;
@@ -340,7 +416,7 @@ submitAnswerBtn.addEventListener("click", function () {
     }
 
     // Check meaning for correctness
-    if (currentCorrectHanzi.meaning == meanSelection) {
+    if (trimMeaning(currentCorrectHanzi.meaning) == meanSelection) {
       meanPrompt.textContent = "Definition: correct";
     } else {
       meanPrompt.textContent = "Definition: incorrect";
@@ -352,13 +428,13 @@ submitAnswerBtn.addEventListener("click", function () {
       currentCorrectHanzi.pronunciation == pronSelection &&
       currentCorrectHanzi.meaning == meanSelection
     ) {
-      console.log("Correct answer!");
       correctAnswer = true;
     } else {
-      console.log("Incorrect answer :(");
       correctAnswer = false;
     }
   }
+
+  // Update GUI
   ansPrompt.textContent = "Click next to continue.";
   submitAnswerBtn.textContent = "Next";
   calculateRange();
@@ -377,5 +453,25 @@ tradBtn.addEventListener("click", function () {
 });
 
 beginTestBtn.addEventListener("click", function () {
+  if (tradBtn.classList.contains("choice-activated")) {
+    simplifiedCharset = false;
+  } else {
+    simplifiedCharset = true;
+  }
+  simpBtn.classList.remove("choice-activated");
+  tradBtn.classList.remove("choice-activated");
+  beginTestBtn.classList.add("disabled-button");
   initializeTest();
+});
+
+abandonTestBtn.addEventListener("click", function () {
+  appContainer.classList.add("hidden");
+  introText.classList.remove("hidden");
+  modalChooseList.style.display = "block";
+  modalAbandon.style.display = "none";
+  testInProgress = false;
+});
+
+continueTestBtn.addEventListener("click", function () {
+  modalAbandon.style.display = "none";
 });

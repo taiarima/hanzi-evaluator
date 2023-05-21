@@ -11,23 +11,33 @@
   <body>
     <nav>
       <div class="logo">
-        <img src="kanjilogo.png" />
+        <img src="hat char edited.png" />
       </div>
       <div class="title">
-        <h1>Hanzi Knowledge Evaluator</h1>
+        <h1>Hanzi Ability Test</h1>
       </div>
       <div class="nav-links">
-        <a class="choose-list-link" href="#">Start Test</a>
-        <a class="about-link" href="#">About</a>
-        <a class="help-link" href="#">Help</a>
+        <a class="choose-list-link">Start Test</a>
+        <a class="about-link">About</a>
+        <a class="help-link">Help</a>
       </div>
-      <button class="menu-toggle" tabindex="0">
+      <!-- <button class="menu-toggle" tabindex="0">
         <img class="hamburger-button" src="hamburgerButtonImg.png" />
       </button>
+      <div class="dropdown-container">
+        <div class="dropdown">
+          <a class="dropdown-item list-dropdown">Start Test</a>
+          <a class="dropdown-item about-dropdown">About</a>
+          <a class="dropdown-item help-dropdown">Help</a>
+        </div>
+      </div> -->
       <div class="dropdown">
-        <a class="dropdown-item" href="#">Start Test</a>
-        <a class="dropdown-item" href="#">About</a>
-        <a class="dropdown-item" href="#">Help</a>
+        <button class="drop-btn">Dropdown</button>
+        <div class="dropdown-content">
+          <a class="list-dropdown dropdown-item">Start Test</a>
+          <a class="about-dropdown dropdown-item">About</a>
+          <a class="help-dropdown dropdown-item">Help</a>
+        </div>
       </div>
     </nav>
     <main>
@@ -99,6 +109,10 @@
               will result in a more inaccurate calculation of your knowledge.
             </p>
             <p>
+              The test should take 5-10 minutes. You must complete the entire
+              test to see your results.
+            </p>
+            <p>
               Results given are an estimation. If you would like a more accurate
               calculation of your knowledge, try taking the test multiple times
               and averaging your results.
@@ -122,6 +136,42 @@
           <span class="close-about-btn close-modal-btn">&times;</span>
           <div class="about-modal-text">
             <h1>About</h1>
+            <p>
+              This application was made with the goal to help you estimate how
+              many Chinese characters (hanzi) you know. It uses the 6,000 most
+              commonly used Chinese characters, as identified by the PRC
+              Ministry of Education. Test prompts have been randomized, so you
+              are guaranteed to have a unique experience every time you take the
+              test. While the application's algorithm has been carefully
+              designed to accurately assess your knowledge, the random nature of
+              the test means your score may vary between evaluations. Take the
+              test multiple times and average your results to get a more precise
+              assessment.
+            </p>
+            <div class="skill-levels">
+              <h3>Approximate skill levels:</h3>
+              <ul>
+                <p>0-500 Characters: Beginner</p>
+                <p>500-1000 Characters: Lower Intermediate</p>
+                <p>1000-2000 Characters: Intermediate</p>
+                <p>2000-3000 Characters: Upper Intermediate</p>
+                <p>3000-4000 Characters: Advanced</p>
+                <p>4000-5000 Characters: Highly Advanced</p>
+                <p>5000-6000 Characters: Hanzi Hero</p>
+              </ul>
+            </div>
+
+            <h3>
+              If you suspect that your results are not well-correlated with your
+              skill level, please take a screenshot, and send me a message with
+              the details of the situation.
+            </h3>
+            <p>
+              If you found this application fun or helpful, please share it with
+              your friends. Send me a message, check out my profile, or take a
+              look at my projects on GitHub. Thank you for your support, and let
+              me know if you any ideas for language learning projects!
+            </p>
           </div>
         </div>
       </div>
@@ -130,6 +180,19 @@
           <span class="close-help-btn close-modal-btn">&times;</span>
           <div class="help-modal-text">
             <h1>Help</h1>
+          </div>
+        </div>
+      </div>
+      <div class="modal-window modal-abandon">
+        <div class="modal-content">
+          <span class="close-abandon-btn close-modal-btn">&times;</span>
+          <div class="abandon-modal-container">
+            <h3>
+              A test is already in session. Would you like to abandon your
+              progress?
+            </h3>
+            <button class="abandon-btn">Yes, abandon current test.</button>
+            <button class="continue-btn">No, continue test in progress.</button>
           </div>
         </div>
       </div>
