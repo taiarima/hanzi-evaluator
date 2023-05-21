@@ -60,6 +60,7 @@ let triesUntilTestOver = 100;
 let correctAnswers = [];
 let incorrectAnswers = [];
 
+//TODO: Make sure that each hanzi generated is unique
 function generatePrompt() {
   // Reset the GUI
   ansPrompt.textContent = "Confirm Answer.";
@@ -72,7 +73,15 @@ function generatePrompt() {
   // This array will hold the four random hanzi objects which make up the choices
   const hanziArray = [];
   for (let i = 0; i < pronChoiceList.length; i++) {
-    hanziArray.push(generateRandomHanzi(min, max));
+    let nextHanzi;
+    // This do:while loop should prevent us from seeing any hanzi twice in the same test
+    do {
+      nextHanzi = generateRandomHanzi();
+    } while (
+      incorrectAnswers.includes(hanziList.indexOf(nextHanzi)) ||
+      correctAnswers.includes(hanziList.indexOf(nextHanzi))
+    );
+    hanziArray.push(nextHanzi);
   }
 
   // Fill up the pronunciation choices
@@ -129,6 +138,7 @@ function generateRandomHanzi() {
 
 // TODO: This algorithm is currently broken as it results in dead-ends....
 function calculateRange() {
+  totalAnswers++;
   // Update value based on whether user answered correctly
   const currentHanziIndex = hanziList.indexOf(currentCorrectHanzi);
   if (correctAnswer) {
@@ -142,6 +152,9 @@ function calculateRange() {
     incorrectAnswersThisRound++;
     incorrectAnswers.push(currentHanziIndex);
   }
+  console.log(
+    `totalAnswers = ${totalAnswers}\n currentStreak = ${currentStreak}\n min = ${min}\n max = ${max}`
+  );
 
   // If user has gone through 100 hanzi, the test is over
   if (totalAnswers >= triesUntilTestOver) {
@@ -149,25 +162,35 @@ function calculateRange() {
   }
 
   // Otherwise, determine new top and bottom if necessary according to user's current performance
-  else {
+  else if (
+    Math.abs(currentStreak) >= 5 ||
+    correctAnswersThisRound + incorrectAnswersThisRound >= 15
+  ) {
     if (currentStreak >= 5) {
       // Set new bottom, push top up
       min = highestCorrectHanzi;
-      max = Math.min(max * 2, hanziList.length);
+      max = Math.min(max + 650, hanziList.length);
     } else if (currentStreak <= -5) {
       // Set new top, push bottom down
       max = lowestIncorrectHanzi;
       min = min / 2;
-    } else if (correctAnswersThisRound + incorrectAnswersThisRound >= 15) {
+      currentStreak = 0;
+    } else if (correctAnswersThisRound + incorrectAnswersThisRound >= 10) {
       // Adjust top and bottom accordingly
       if (highestCorrectHanzi > lowestIncorrectHanzi) {
-        min = lowestIncorrectHanzi;
-        max = highestCorrectHanzi;
+        min = highestCorrectHanzi;
+        max = Math.min(max + 250, hanziList.length);
       } else {
         max = highestCorrectHanzi;
         min = lowestIncorrectHanzi;
       }
     }
+    if (min >= max || max - min < 50) {
+      min = Math.max(0, max - 250);
+    }
+    currentStreak = 0;
+    incorrectAnswersThisRound = 0;
+    correctAnswersThisRound = 0;
   }
 }
 
@@ -187,7 +210,7 @@ function initializeTest() {
   min = 0;
   max = 500;
   correctAnswer = false;
-  triesUntilTestOver = 100;
+  triesUntilTestOver = 50;
   correctAnswers = [];
   incorrectAnswers = [];
 
@@ -196,7 +219,7 @@ function initializeTest() {
 }
 
 function generateResults() {
-  const score = estimateSkillLevel();
+  const score = Math.floor((max + min) / 2);
 
   // Update GUI
   appContainer.classList.add("hidden");
@@ -210,32 +233,33 @@ function generateResults() {
   testInProgress = false;
 }
 
-function estimateSkillLevel() {
-  // Calculate average difficulty level of correct answers
-  const sumCorrect = correctAnswers.reduce((acc, level) => acc + level, 0);
-  const avgCorrect = sumCorrect / correctAnswers.length;
+// I don't think this function gives the kind of results I'm looking for, so I'm probably goign to delete it entirely
+// function estimateSkillLevel() {
+//   // Calculate average difficulty level of correct answers
+//   const sumCorrect = correctAnswers.reduce((acc, level) => acc + level, 0);
+//   const avgCorrect = sumCorrect / correctAnswers.length;
 
-  // Calculate average difficulty level of incorrect answers
-  const sumIncorrect = incorrectAnswers.reduce((acc, level) => acc + level, 0);
-  const avgIncorrect = sumIncorrect / incorrectAnswers.length;
+//   // Calculate average difficulty level of incorrect answers
+//   const sumIncorrect = incorrectAnswers.reduce((acc, level) => acc + level, 0);
+//   const avgIncorrect = sumIncorrect / incorrectAnswers.length;
 
-  // Determine the range of difficulty levels covered by incorrect answers
-  const lowestIncorrect = Math.min(...incorrectAnswers);
-  const highestIncorrect = Math.max(...incorrectAnswers);
-  const rangeIncorrect = highestIncorrect - lowestIncorrect;
+//   // Determine the range of difficulty levels covered by incorrect answers
+//   const lowestIncorrect = Math.min(...incorrectAnswers);
+//   const highestIncorrect = Math.max(...incorrectAnswers);
+//   const rangeIncorrect = highestIncorrect - lowestIncorrect;
 
-  // Determine the range of difficulty levels covered by correct answers
-  const lowestCorrect = Math.min(...correctAnswers);
-  const highestCorrect = Math.max(...correctAnswers);
-  const rangeCorrect = highestCorrect - lowestCorrect;
-
-  // Compare the ranges of correct and incorrect answers
-  if (rangeCorrect > rangeIncorrect) {
-    return avgCorrect;
-  } else {
-    return avgIncorrect;
-  }
-}
+//   // Determine the range of difficulty levels covered by correct answers
+//   const lowestCorrect = Math.min(...correctAnswers);
+//   const highestCorrect = Math.max(...correctAnswers);
+//   const rangeCorrect = highestCorrect - lowestCorrect;
+//   console.log(avgIncorrect - avgCorrect);
+//   // Compare the ranges of correct and incorrect answers
+//   if (rangeCorrect > rangeIncorrect) {
+//     return avgCorrect;
+//   } else {
+//     return avgIncorrect;
+//   }
+// }
 
 // Coding Modal windows
 // Get the modal
@@ -266,10 +290,6 @@ aboutLink.onclick = function () {
 helpLink.onclick = function () {
   modalHelp.style.display = "block";
 };
-
-// dropdownToggle.addEventListener("click", function () {
-//   dropdown.classList.toggle("show");
-// });
 
 document.addEventListener("click", function (event) {
   if (event.target.classList.contains("dropdown-item")) {
@@ -348,8 +368,7 @@ pronChoiceList.forEach((button) => {
     ) {
       submitAnswerBtn.textContent = "Submit";
     } else {
-      submitAnswerBtn.textContent = "I don't know";
-      console.log("I am getting here");
+      submitAnswerBtn.textContent = "I don't know this hanzi";
     }
   });
 });
@@ -375,15 +394,27 @@ meaningChoiceList.forEach((button) => {
     ) {
       submitAnswerBtn.textContent = "Submit";
     } else {
-      submitAnswerBtn.textContent = "I don't know";
+      submitAnswerBtn.textContent = "I don't know this hanzi";
     }
   });
 });
 
 // The "submit answer" button actually has a variety of functions depending on the state
 submitAnswerBtn.addEventListener("click", function () {
+  meaningChoiceList.forEach((ele) => ele.classList.add("disabled-choice"));
+  pronChoiceList.forEach((ele) => ele.classList.add("disabled-choice"));
   // The submit button changes to "next" after the user submits an answer. Clicking next generates next prompt.
   if (submitAnswerBtn.textContent === "Next") {
+    pronChoiceList.forEach((ele) => {
+      ele.classList.remove("incorrect-style");
+      ele.classList.remove("correct-style");
+      ele.classList.remove("disabled-choice");
+    });
+    meaningChoiceList.forEach((ele) => {
+      ele.classList.remove("incorrect-style");
+      ele.classList.remove("correct-style");
+      ele.classList.remove("disabled-choice");
+    });
     window.scrollTo(0, 0);
     generatePrompt();
     return;
@@ -398,35 +429,60 @@ submitAnswerBtn.addEventListener("click", function () {
     correctAnswer = false;
     pronPrompt.textContent = 'You submitted "I don\'t know" for this hanzi.';
     meanPrompt.textContent = "";
+    pronChoiceList.forEach((ele) => {
+      if (ele.textContent === currentCorrectHanzi.pronunciation) {
+        ele.classList.add("correct-style");
+      }
+    });
+    meaningChoiceList.forEach((ele) => {
+      if (ele.textContent === trimMeaning(currentCorrectHanzi.meaning)) {
+        ele.classList.add("correct-style");
+      }
+    });
   }
+
   // Evaluates answer of pronunciation and meaning, correct answer only set if both are correct
   else {
     const pronSelection = document.querySelector(
       ".pron-choice.choice-activated"
-    ).textContent;
+    );
     const meanSelection = document.querySelector(
       ".mean-choice.choice-activated"
-    ).textContent;
+    );
 
     // Check pronunciation for correctness
-    if (currentCorrectHanzi.pronunciation == pronSelection) {
-      pronPrompt.textContent = "Pronunciation: correct";
+    if (currentCorrectHanzi.pronunciation == pronSelection.textContent) {
+      pronPrompt.textContent = "Pronunciation: Correct";
+      pronSelection.classList.add("correct-style");
     } else {
-      pronPrompt.textContent = "Pronunciation: incorrect";
+      pronPrompt.textContent = "Pronunciation: Incorrect";
+      pronSelection.classList.add("incorrect-style");
+      pronChoiceList.forEach((ele) => {
+        if (ele.textContent === currentCorrectHanzi.pronunciation) {
+          ele.classList.add("correct-style");
+        }
+      });
     }
 
     // Check meaning for correctness
-    if (trimMeaning(currentCorrectHanzi.meaning) == meanSelection) {
-      meanPrompt.textContent = "Definition: correct";
+    if (trimMeaning(currentCorrectHanzi.meaning) == meanSelection.textContent) {
+      meanPrompt.textContent = "Definition: Correct";
+      meanSelection.classList.add("correct-style");
     } else {
-      meanPrompt.textContent = "Definition: incorrect";
+      meanPrompt.textContent = "Definition: Incorrect";
+      meanSelection.classList.add("incorrect-style");
+      meaningChoiceList.forEach((ele) => {
+        if (ele.textContent === trimMeaning(currentCorrectHanzi.meaning)) {
+          ele.classList.add("correct-style");
+        }
+      });
     }
 
     // Evaluates total answer for correctness.
     // Answers are only correct if user selected correct pronunciation and meaning
     if (
-      currentCorrectHanzi.pronunciation == pronSelection &&
-      currentCorrectHanzi.meaning == meanSelection
+      currentCorrectHanzi.pronunciation == pronSelection.textContent &&
+      trimMeaning(currentCorrectHanzi.meaning) == meanSelection.textContent
     ) {
       correctAnswer = true;
     } else {

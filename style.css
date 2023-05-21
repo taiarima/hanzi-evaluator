@@ -8,7 +8,6 @@ html {
   width: 100%;
 }
 body {
-  /* position: relative; */
   background-color: var(--color-dark);
   color: #fff;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
@@ -50,6 +49,7 @@ nav {
   height: 120px;
   margin-right: 20px;
   border-radius: 50%;
+  left: 0;
 }
 
 .nav-links {
@@ -72,9 +72,9 @@ nav {
 }
 
 .title {
-  font-size: 2vw;
+  font-size: 2rem;
   position: absolute;
-  left: 150px;
+  left: 170px;
 }
 
 .app-container {
@@ -143,13 +143,6 @@ button:hover {
   display: none;
 }
 
-/* Media query for smaller screens */
-@media screen and (max-width: 1100px) {
-  /* Hide the navbar links */
-  .nav-links {
-    display: none;
-  }
-}
 .skill-levels {
   display: flex;
   flex-direction: column;
@@ -158,69 +151,6 @@ button:hover {
 .skill-levels ul {
   margin-top: -20px;
 }
-
-/* Show the menu toggle button */
-/* .menu-toggle {
-      display: block;
-    } */
-
-/* Style the menu toggle button */
-/* .menu-toggle {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    height: 60px;
-    cursor: pointer;
-    margin-left: auto;
-    margin-right: 30px;
-    background-color: var(--color-medium);
-  }
-
-  .menu-toggle .bar {
-    width: 100%;
-    height: 2px;
-    background-color: black;
-  }
-} */
-
-/* Styles for the drop-down menu */
-/* .dropdown {
-  display: none;
-}
-
-.dropdown.show {
-  display: block;
-}
-
-.dropdown-item {
-  display: block;
-  padding: 5px;
-  background-color: #f1f1f1;
-  border: 1px solid black;
-  cursor: pointer;
-  width: 100%;
-  color: black;
-  z-index: 2;
-} */
-
-/* Show the drop-down menu when the menu toggle button is clicked */
-/* .menu-toggle:focus + .dropdown {
-  display: block;
-  position: absolute;
-  top: 100%;
-  right: 0;
-  width: 200px;
-}
-
-.menu-toggle:hover {
-  background-color: var(--color-bright);
-}
-
-.hamburger-button {
-  height: 30px;
-  width: 30px;
-  filter: invert(100%);
-} */
 
 /* The Modal (background) */
 .modal-window {
@@ -292,11 +222,13 @@ button:hover {
   cursor: not-allowed;
 }
 
+.disabled-choice {
+  pointer-events: none;
+  cursor: not-allowed;
+}
+
 .intro-text {
-  /* position: absolute; */
   top: 100px;
-  /* right: 30%; */
-  /* left: 25%; */
   display: block;
   margin: 0 auto;
   max-width: 800px;
@@ -327,6 +259,16 @@ footer {
   border: 2px solid blue;
 }
 
+.incorrect-style {
+  background-color: rgb(213, 32, 32);
+  border: 2px solid whitesmoke;
+}
+
+.correct-style {
+  background-color: rgb(89, 159, 89);
+  border: 5px solid limegreen;
+}
+
 .results {
   display: block;
   margin: 0 auto;
@@ -349,7 +291,6 @@ footer {
   font-family: Helvetica, sans-serif;
   width: 300px;
 }
-/* Experimenting with dropdown */
 
 /* Dropdown Button */
 .drop-btn {
@@ -358,12 +299,14 @@ footer {
   padding: 16px;
   font-size: 16px;
   border: none;
+  margin-right: 35px;
 }
 
 /* The container <div> - needed to position the dropdown content */
 .dropdown {
-  position: relative;
-  display: inline-block;
+  /* position: relative;
+  display: inline-block; */
+  display: none;
 }
 
 /* Dropdown Content (Hidden by Default) */
@@ -374,6 +317,7 @@ footer {
   min-width: 160px;
   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
   z-index: 1;
+  right: 38%;
 }
 
 /* Links inside the dropdown */
@@ -395,6 +339,41 @@ footer {
 }
 
 /* Change the background color of the dropdown button when the dropdown content is shown */
-.dropdown:hover .dropbtn {
+.dropdown:hover .drop-btn {
   background-color: #3e8e41;
+}
+
+.hamburger-button {
+  height: 30px;
+  width: 30px;
+  filter: invert(100%);
+}
+
+/* Media query for smaller screens */
+@media screen and (max-width: 1100px) {
+  .nav-links {
+    display: none;
+  }
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+}
+
+@media (max-width: 730px) {
+  .title {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 490px) {
+  .title {
+    font-size: 0.5rem;
+  }
+}
+
+@media (max-width: 370px) {
+  .title {
+    display: none;
+  }
 }
