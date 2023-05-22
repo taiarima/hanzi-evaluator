@@ -110,6 +110,8 @@ nav {
   font-size: 14rem;
   resize: none;
   text-align: center;
+  touch-action: none;
+  pointer-events: none;
 }
 
 .hanzi-prompt::-webkit-scrollbar {
