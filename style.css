@@ -284,12 +284,12 @@ footer {
 }
 
 .incorrect-hanzi {
-  resize: none;
   background-color: #123805;
   color: #f1f1f1;
   font-size: large;
   font-family: Helvetica, sans-serif;
   width: 300px;
+  height: 500px;
 }
 
 /* Dropdown Button */

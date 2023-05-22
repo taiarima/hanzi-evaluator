@@ -1,8 +1,5 @@
 `use strict`;
 
-// TODO:
-// Test during a test needs to be fixed
-
 // Selecting Elements
 const logo = document.querySelector(".logo");
 const title = document.querySelector(".title");
@@ -47,18 +44,18 @@ let simplifiedCharset = true;
 let currentCorrectHanzi;
 
 // These variables will be used in the calculateRange function
-let highestCorrectHanzi = 0;
-let lowestIncorrectHanzi = 6000;
-let currentStreak = 0;
-let totalAnswers = 0;
-let correctAnswersThisRound = 0;
-let incorrectAnswersThisRound = 0;
-let min = 0;
-let max = 500;
+let highestCorrectHanzi;
+let lowestIncorrectHanzi;
+let currentStreak;
+let totalAnswers;
+let correctAnswersThisRound;
+let incorrectAnswersThisRound;
+let min;
+let max;
 let correctAnswer;
-let triesUntilTestOver = 100;
-let correctAnswers = [];
-let incorrectAnswers = [];
+let triesUntilTestOver;
+let correctAnswers;
+let incorrectAnswers;
 
 //TODO: Make sure that each hanzi generated is unique
 function generatePrompt() {
@@ -135,8 +132,6 @@ function generateRandomHanzi() {
 }
 
 // Keeps track of incorrect and correct answers and calculates a new range based on these
-
-// TODO: This algorithm is currently broken as it results in dead-ends....
 function calculateRange() {
   totalAnswers++;
   // Update value based on whether user answered correctly
@@ -158,7 +153,12 @@ function calculateRange() {
 
   // If user has gone through 100 hanzi, the test is over
   if (totalAnswers >= triesUntilTestOver) {
-    generateResults();
+    if (incorrectAnswers.length === 0) {
+      triesUntilTestOver += 10;
+    } else {
+      generateResults();
+      return;
+    }
   }
 
   // Otherwise, determine new top and bottom if necessary according to user's current performance
@@ -172,9 +172,8 @@ function calculateRange() {
       max = Math.min(max + 650, hanziList.length);
     } else if (currentStreak <= -5) {
       // Set new top, push bottom down
-      max = lowestIncorrectHanzi;
+      max = Math.max(highestCorrectHanzi - 100, 50);
       min = min / 2;
-      currentStreak = 0;
     } else if (correctAnswersThisRound + incorrectAnswersThisRound >= 10) {
       // Adjust top and bottom accordingly
       if (highestCorrectHanzi > lowestIncorrectHanzi) {
@@ -186,6 +185,13 @@ function calculateRange() {
       }
     }
     if (min >= max || max - min < 50) {
+      // This will give the user a perfect score if they deserve it
+      if (min > 5900 && incorrectAnswers.length === 0) {
+        min = 6000;
+        max = 6000;
+        generateResults();
+        return;
+      }
       min = Math.max(0, max - 250);
     }
     currentStreak = 0;
@@ -200,7 +206,7 @@ function initializeTest() {
   appContainer.classList.remove("hidden");
   modalChooseList.style.display = "none";
 
-  // Reset state, in case user has done a test before
+  // Initialize variables for new test
   highestCorrectHanzi = 0;
   lowestIncorrectHanzi = 6000;
   currentStreak = 0;
@@ -224,42 +230,23 @@ function generateResults() {
   // Update GUI
   appContainer.classList.add("hidden");
   resultsContainer.classList.remove("hidden");
+  window.scrollTo(0, 0);
   resultString.textContent = `Wow, you know approximately ${score} Hanzi!`;
-  incorrectAnswers.forEach(
-    (hanziNum) => (incorrectHanziTextArea.value += hanziNum)
-  ); // Fix this line to be the actual hanzi info
-
+  if (incorrectAnswers.length > 0) {
+    incorrectHanziTextArea.value = "Hanzi you answered incorrectly:\n";
+    incorrectAnswers.forEach((hanziNum, idx) => {
+      currHanzi = hanziList[hanziNum];
+      incorrectHanziTextArea.value += `\n${idx + 1}. ${
+        simplifiedCharset ? currHanzi.simplified : currHanzi.traditional
+      } : ${currHanzi.pronunciation} -- ${trimMeaning(currHanzi.meaning)}\n`;
+    });
+  } else {
+    incorrectHanziTextArea.value =
+      "You answered every question correctly! You're a HANZI HERO! 💯😮🎉\n";
+  }
   // TODO: Add an SNS sharing thing
   testInProgress = false;
 }
-
-// I don't think this function gives the kind of results I'm looking for, so I'm probably goign to delete it entirely
-// function estimateSkillLevel() {
-//   // Calculate average difficulty level of correct answers
-//   const sumCorrect = correctAnswers.reduce((acc, level) => acc + level, 0);
-//   const avgCorrect = sumCorrect / correctAnswers.length;
-
-//   // Calculate average difficulty level of incorrect answers
-//   const sumIncorrect = incorrectAnswers.reduce((acc, level) => acc + level, 0);
-//   const avgIncorrect = sumIncorrect / incorrectAnswers.length;
-
-//   // Determine the range of difficulty levels covered by incorrect answers
-//   const lowestIncorrect = Math.min(...incorrectAnswers);
-//   const highestIncorrect = Math.max(...incorrectAnswers);
-//   const rangeIncorrect = highestIncorrect - lowestIncorrect;
-
-//   // Determine the range of difficulty levels covered by correct answers
-//   const lowestCorrect = Math.min(...correctAnswers);
-//   const highestCorrect = Math.max(...correctAnswers);
-//   const rangeCorrect = highestCorrect - lowestCorrect;
-//   console.log(avgIncorrect - avgCorrect);
-//   // Compare the ranges of correct and incorrect answers
-//   if (rangeCorrect > rangeIncorrect) {
-//     return avgCorrect;
-//   } else {
-//     return avgIncorrect;
-//   }
-// }
 
 // Coding Modal windows
 // Get the modal
