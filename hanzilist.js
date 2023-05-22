@@ -5885,7 +5885,7 @@ const hanziList = [
     traditional: "承",
     pronunciation: "chéng",
     meaning:
-      "Cheng (c. 2000 BC), third of the legendary Flame Emperors 炎帝 Farmer God; to bear; to carry; to hold; to continue; to undertake; to take charge; owing to; due to; to receive",
+      "to receive; to accept; to inherit",
   },
   {
     simplified: "退",
@@ -30823,7 +30823,7 @@ const hanziList = [
     simplified: "晟",
     traditional: "晟",
     pronunciation: "chéng",
-    meaning: "surname Cheng",
+    meaning: "a surname",
   },
   {
     simplified: "纮",
