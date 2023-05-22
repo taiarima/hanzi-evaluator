@@ -43,7 +43,7 @@ let simplifiedCharset = true;
 // The user must select the pronunciation and meaning which match this hanzi object
 let currentCorrectHanzi;
 
-// These variables will be used in the calculateRange function
+// These variables will be used in the calculateRange function, initialized in initailizeTest function
 let highestCorrectHanzi;
 let lowestIncorrectHanzi;
 let currentStreak;
@@ -57,7 +57,6 @@ let triesUntilTestOver;
 let correctAnswers;
 let incorrectAnswers;
 
-//TODO: Make sure that each hanzi generated is unique
 function generatePrompt() {
   // Reset the GUI
   ansPrompt.textContent = "Confirm Answer.";
@@ -76,7 +75,7 @@ function generatePrompt() {
       nextHanzi = generateRandomHanzi();
     } while (
       incorrectAnswers.includes(hanziList.indexOf(nextHanzi)) ||
-      correctAnswers.includes(hanziList.indexOf(nextHanzi))
+      correctAnswers.includes(hanziList.indexOf(nextHanzi)) || hanziArray.includes(nextHanzi)
     );
     hanziArray.push(nextHanzi);
   }
