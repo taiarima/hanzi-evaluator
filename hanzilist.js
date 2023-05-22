@@ -488,7 +488,7 @@ const hanziList = [
     simplified: "很",
     traditional: "很",
     pronunciation: "hěn",
-    meaning: "(adverb of degree); quite; very; awfully",
+    meaning: "quite; very; awfully",
   },
   {
     simplified: "信",
@@ -533,9 +533,8 @@ const hanziList = [
   {
     simplified: "地",
     traditional: "地",
-    pronunciation: "de",
-    meaning:
-      "-ly; structural particle: used before a verb or adjective, linking it to preceding modifying adverbial adjunct",
+    pronunciation: "dì, de",
+    meaning: "earth; ground",
   },
   {
     simplified: "发",
@@ -5768,7 +5767,7 @@ const hanziList = [
     simplified: "委",
     traditional: "委",
     pronunciation: "wēi",
-    meaning: "same as 逶 in 逶迤 winding, curved",
+    meaning: "winding, curved",
   },
   {
     simplified: "湖",
@@ -5884,8 +5883,7 @@ const hanziList = [
     simplified: "承",
     traditional: "承",
     pronunciation: "chéng",
-    meaning:
-      "to receive; to accept; to inherit",
+    meaning: "to receive; to accept; to inherit",
   },
   {
     simplified: "退",
@@ -21328,7 +21326,7 @@ const hanziList = [
     traditional: "戌",
     pronunciation: "xū",
     meaning:
-      "11th earthly branch: 7-9 p.m., 9th solar month (8th October-6th November), year of the Dog; ancient Chinese compass point: 300°",
+      "11th earthly branch: 7-9 p.m., 9th solar month (8th October-6th November), year of the Dog",
   },
   {
     simplified: "屌",
@@ -21494,14 +21492,14 @@ const hanziList = [
     simplified: "岐",
     traditional: "岐",
     pronunciation: "qí",
-    meaning: "variant of 歧 [qi2]; also used in place names",
+    meaning: "used in place names",
   },
   {
     simplified: "凄",
     traditional: "悽",
     pronunciation: "qī",
     meaning:
-      "sad; mournful; variant of 淒 |凄 , dismal; grim; lamentable; mournful",
+      "sad; mournful; dismal; grim; lamentable; mournful",
   },
   {
     simplified: "鲫",
@@ -21816,7 +21814,7 @@ const hanziList = [
     traditional: "巳",
     pronunciation: "sì",
     meaning:
-      "6th earthly branch: 9-11 a.m., 4th solar month (5th May-5th June), year of the Snake; ancient Chinese compass point: 150°",
+      "6th earthly branch: 9-11 a.m., 4th solar month (5th May-5th June), year of the Snake",
   },
   {
     simplified: "铲",
@@ -30009,7 +30007,7 @@ const hanziList = [
     simplified: "凌",
     traditional: "淩",
     pronunciation: "líng",
-    meaning: "variant of 凌",
+    meaning: "ice; to place oneself above",
   },
   {
     simplified: "顸",
