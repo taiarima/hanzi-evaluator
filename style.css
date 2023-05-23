@@ -169,6 +169,25 @@ button:hover {
   align-items: center;
 }
 
+.skill-levels {
+  text-align: center;
+}
+
+.skill-levels ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.char-nums {
+  float: left;
+  padding-right: 10px;
+}
+
+.level {
+  float: right;
+  padding-left: 10px;
+}
+
 /* Modal Content/Box */
 .modal-content {
   background-color: #fefefe;
@@ -181,6 +200,10 @@ button:hover {
 
 .modal-content h1 {
   text-align: center;
+}
+
+.modal-content p {
+  text-align: justify;
 }
 
 /* Close Button */
