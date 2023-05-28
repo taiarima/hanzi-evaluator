@@ -75,7 +75,8 @@ function generatePrompt() {
       nextHanzi = generateRandomHanzi();
     } while (
       incorrectAnswers.includes(hanziList.indexOf(nextHanzi)) ||
-      correctAnswers.includes(hanziList.indexOf(nextHanzi)) || hanziArray.includes(nextHanzi)
+      correctAnswers.includes(hanziList.indexOf(nextHanzi)) ||
+      hanziArray.includes(nextHanzi)
     );
     hanziArray.push(nextHanzi);
   }
@@ -197,6 +198,7 @@ function calculateRange() {
     incorrectAnswersThisRound = 0;
     correctAnswersThisRound = 0;
   }
+  updateProgressBar();
 }
 
 function initializeTest() {
@@ -245,6 +247,13 @@ function generateResults() {
   }
   // TODO: Add an SNS sharing thing
   testInProgress = false;
+}
+
+// Progress bar
+const progressBar = document.getElementById("progress-bar");
+function updateProgressBar() {
+  const percentage = (totalAnswers / triesUntilTestOver) * 100;
+  progressBar.style.width = `${percentage}%`;
 }
 
 // Coding Modal windows

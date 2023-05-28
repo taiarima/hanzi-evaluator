@@ -402,3 +402,26 @@ footer {
     display: none;
   }
 }
+
+/* Programming Progress Bar */
+
+.progress-container {
+  margin-top: 20px;
+  width: 300px;
+  background-color: #ccc;
+  height: 20px;
+  text-align: center;
+  position: relative;
+}
+
+#progress-bar {
+  background-color: #4caf50; /* Green */
+  height: 100%;
+  width: 0%;
+}
+
+.progress-label {
+  position: absolute;
+  top: -20px;
+  left: 0;
+}
