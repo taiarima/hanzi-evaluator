@@ -56,6 +56,7 @@ let correctAnswer;
 let triesUntilTestOver;
 let correctAnswers;
 let incorrectAnswers;
+let honingRangeBool;
 
 function generatePrompt() {
   // Reset the GUI
@@ -131,9 +132,80 @@ function generateRandomHanzi() {
   return hanziList[randomNum];
 }
 
+// Going to try to implement improved function from Japanese version, so commenting this all out for now
 // Keeps track of incorrect and correct answers and calculates a new range based on these
+// function calculateRange() {
+//   totalAnswers++;
+//   // Update value based on whether user answered correctly
+//   const currentHanziIndex = hanziList.indexOf(currentCorrectHanzi);
+//   if (correctAnswer) {
+//     highestCorrectHanzi = Math.max(currentHanziIndex, highestCorrectHanzi);
+//     currentStreak = currentStreak > 0 ? ++currentStreak : 1;
+//     correctAnswers.push(currentHanziIndex);
+//     correctAnswersThisRound++;
+//   } else {
+//     lowestIncorrectHanzi = Math.min(currentHanziIndex, lowestIncorrectHanzi);
+//     currentStreak = currentStreak < 0 ? --currentStreak : -1;
+//     incorrectAnswersThisRound++;
+//     incorrectAnswers.push(currentHanziIndex);
+//   }
+//   console.log(
+//     `totalAnswers = ${totalAnswers}\n currentStreak = ${currentStreak}\n min = ${min}\n max = ${max}`
+//   );
+
+//   // If user has gone through 100 hanzi, the test is over
+//   if (totalAnswers >= triesUntilTestOver) {
+//     if (incorrectAnswers.length === 0) {
+//       triesUntilTestOver += 10;
+//     } else {
+//       generateResults();
+//       return;
+//     }
+//   }
+
+//   // Otherwise, determine new top and bottom if necessary according to user's current performance
+//   else if (
+//     Math.abs(currentStreak) >= 5 ||
+//     correctAnswersThisRound + incorrectAnswersThisRound >= 15
+//   ) {
+//     if (currentStreak >= 5) {
+//       // Set new bottom, push top up
+//       min = highestCorrectHanzi;
+//       max = Math.min(max + 650, hanziList.length);
+//     } else if (currentStreak <= -5) {
+//       // Set new top, push bottom down
+//       max = Math.max(highestCorrectHanzi - 100, 50);
+//       min = min / 2;
+//     } else if (correctAnswersThisRound + incorrectAnswersThisRound >= 10) {
+//       // Adjust top and bottom accordingly
+//       if (highestCorrectHanzi > lowestIncorrectHanzi) {
+//         min = highestCorrectHanzi;
+//         max = Math.min(max + 250, hanziList.length);
+//       } else {
+//         max = highestCorrectHanzi;
+//         min = lowestIncorrectHanzi;
+//       }
+//     }
+//     if (min >= max || max - min < 50) {
+//       // This will give the user a perfect score if they deserve it
+//       if (min > 5900 && incorrectAnswers.length === 0) {
+//         min = 6000;
+//         max = 6000;
+//         generateResults();
+//         return;
+//       }
+//       min = Math.max(0, max - 250);
+//     }
+//     currentStreak = 0;
+//     incorrectAnswersThisRound = 0;
+//     correctAnswersThisRound = 0;
+//   }
+//   updateProgressBar();
+// }
+
 function calculateRange() {
   totalAnswers++;
+
   // Update value based on whether user answered correctly
   const currentHanziIndex = hanziList.indexOf(currentCorrectHanzi);
   if (correctAnswer) {
@@ -146,12 +218,19 @@ function calculateRange() {
     currentStreak = currentStreak < 0 ? --currentStreak : -1;
     incorrectAnswersThisRound++;
     incorrectAnswers.push(currentHanziIndex);
+    if (!honingRangeBool) {
+      honingRangeBool = true;
+      min = Math.max(hanziList.indexOf(currentCorrectHanzi) - 25, 0);
+      max = hanziList.indexOf(currentCorrectHanzi) + 25;
+    }
   }
-  console.log(
-    `totalAnswers = ${totalAnswers}\n currentStreak = ${currentStreak}\n min = ${min}\n max = ${max}`
-  );
 
-  // If user has gone through 100 hanzi, the test is over
+  // For Debugging purposes
+  // console.log(
+  //   `totalAnswers = ${totalAnswers}\n currentStreak = ${currentStreak}\n min = ${min}\n max = ${max}`
+  // );
+
+  // If user has gone through 50 Hanzi, the test is over
   if (totalAnswers >= triesUntilTestOver) {
     if (incorrectAnswers.length === 0) {
       triesUntilTestOver += 10;
@@ -162,43 +241,124 @@ function calculateRange() {
   }
 
   // Otherwise, determine new top and bottom if necessary according to user's current performance
-  else if (
-    Math.abs(currentStreak) >= 5 ||
-    correctAnswersThisRound + incorrectAnswersThisRound >= 15
-  ) {
-    if (currentStreak >= 5) {
-      // Set new bottom, push top up
+  // Only if the user has a current streak of abs(5) or 15 total answers this round
+
+  // Condition 1 -- The user is on a positive streak so they probably know all the Hanzi in the range
+  // This allows the range to quickly shoot up as long as the user consistently answers correctly
+  if (currentStreak >= 5 && !honingRangeBool) {
+    // Set new bottom, push top up
+    min = highestCorrectHanzi;
+    max = Math.min(max + 650, hanziList.length);
+    endCalcRangeRound();
+  }
+  // Condition 2 -- The user is on a negative streak, so they might need the range bumped down otherwise they'll terminate early
+  else if (currentStreak <= -5) {
+    // Set new top, push bottom down
+    max = highestCorrectHanzi + 50;
+    min = highestCorrectHanzi;
+    honingRangeBool = false;
+    endCalcRangeRound();
+  }
+
+  // Condition 3 -- The user isn't on any streaks, but they've answered 15 prompts this round
+  else if (correctAnswersThisRound + incorrectAnswersThisRound >= 15) {
+    // If the user got at least 10 out of 15 correct, they can keep playing
+    if (correctAnswersThisRound >= 10) {
       min = highestCorrectHanzi;
-      max = Math.min(max + 650, hanziList.length);
-    } else if (currentStreak <= -5) {
-      // Set new top, push bottom down
-      max = Math.max(highestCorrectHanzi - 100, 50);
-      min = min / 2;
-    } else if (correctAnswersThisRound + incorrectAnswersThisRound >= 10) {
-      // Adjust top and bottom accordingly
-      if (highestCorrectHanzi > lowestIncorrectHanzi) {
-        min = highestCorrectHanzi;
-        max = Math.min(max + 250, hanziList.length);
-      } else {
-        max = highestCorrectHanzi;
-        min = lowestIncorrectHanzi;
-      }
+      max = Math.min(max + 100, hanziList.length);
+      honingRangeBool = false;
+      endCalcRangeRound();
     }
-    if (min >= max || max - min < 50) {
-      // This will give the user a perfect score if they deserve it
-      if (min > 5900 && incorrectAnswers.length === 0) {
-        min = 6000;
-        max = 6000;
-        generateResults();
-        return;
-      }
-      min = Math.max(0, max - 250);
+    // Otherwise we assume we have narrowed in on the user's proper level
+    else {
+      generateResults();
+      return;
     }
-    currentStreak = 0;
-    incorrectAnswersThisRound = 0;
-    correctAnswersThisRound = 0;
+  }
+
+  // If, in calculating the new range, the min has dropped below the max or the range has gone too small
+  if (min >= max || max - min < 50) {
+    min = Math.max(0, max - 50);
+  }
+
+  // Special end game conditions
+  // Perfect score
+  if (min > 5900 && incorrectAnswers.length === 0) {
+    min = 6000;
+    max = 6000;
+    generateResults();
+    return;
+  }
+  // User doesn't know enough Hanzi to calculate a score
+  if (incorrectAnswers.length >= 15 && correctAnswers.length === 0) {
+    generateResults();
+    return;
   }
   updateProgressBar();
+}
+
+function endCalcRangeRound() {
+  currentStreak = 0;
+  incorrectAnswersThisRound = 0;
+  correctAnswersThisRound = 0;
+}
+
+// For testing application only, not for users
+let testResults = []; // Array to hold the final scores of simulated tests using the function below
+function testValue(maxHanziKnown, testRepetitions) {
+  // maxHanziKnown simulates a user's current level, testRepetitions is how many times to simulate a test
+  initializeTest();
+  let incorrectAnswerCounter = 0; // this is used to simulate users randomly not knowing some hanzi, can be used by adjusting first if statement below
+  for (let i = 0; i < testRepetitions; i++) {
+    initializeTest();
+    while (testInProgress) {
+      currentCorrectHanzi = generateRandomHanzi();
+      if (hanziList.indexOf(currentCorrectHanzi) <= maxHanziKnown) {
+        correctAnswer = true;
+      } else {
+        correctAnswer = false;
+      }
+      calculateRange();
+      incorrectAnswerCounter =
+        incorrectAnswerCounter === 9 ? 0 : incorrectAnswerCounter + 1;
+    }
+  }
+  const testsAverage =
+    testResults.reduce((a, b) => a + b, 0) / testResults.length;
+  let outlierCount = 0;
+  testResults.forEach((val) => {
+    if (Math.abs(val - maxHanziKnown) > maxHanziKnown / 10) {
+      outlierCount++;
+    }
+  });
+  console.log(`outlierCount = ${outlierCount}`);
+  console.log(`testaverage = ${testsAverage}`);
+  console.log(testResults);
+  testResults = [];
+}
+
+// This function is to remove outliers from the incorrectAnswers Array at the end of the test
+// This should help by not overly penalizing users who got some lower level kanji incorrect.
+function removeOutliers(arr) {
+  // Calculate mean
+  const mean = arr.reduce((sum, value) => sum + value, 0) / arr.length;
+
+  // Calculate standard deviation
+  const squaredDifferences = arr.map((value) => (value - mean) ** 2);
+  const variance =
+    squaredDifferences.reduce((sum, value) => sum + value, 0) / arr.length;
+  const standardDeviation = Math.sqrt(variance);
+
+  // Remove outliers
+  const threshold = 2;
+  const filteredArr = arr.filter(
+    (value) => Math.abs(value - mean) <= threshold * standardDeviation
+  );
+
+  // Get minimum value of the filtered array
+  const minValue = Math.min(...filteredArr);
+
+  return minValue;
 }
 
 function initializeTest() {
@@ -206,6 +366,7 @@ function initializeTest() {
   introText.classList.add("hidden");
   appContainer.classList.remove("hidden");
   modalChooseList.style.display = "none";
+  progressBar.style.width = 0;
 
   // Initialize variables for new test
   highestCorrectHanzi = 0;
@@ -215,7 +376,7 @@ function initializeTest() {
   correctAnswersThisRound = 0;
   incorrectAnswersThisRound = 0;
   min = 0;
-  max = 500;
+  max = 250;
   correctAnswer = false;
   triesUntilTestOver = 50;
   correctAnswers = [];
@@ -226,7 +387,15 @@ function initializeTest() {
 }
 
 function generateResults() {
+  lowestIncorrectHanzi = removeOutliers(incorrectAnswers);
+  if (highestCorrectHanzi < max) {
+    min = highestCorrectHanzi;
+  }
+  if (lowestIncorrectHanzi > highestCorrectHanzi) {
+    max = lowestIncorrectHanzi;
+  }
   const score = Math.floor((max + min) / 2);
+  testResults.push(score);
 
   // Update GUI
   appContainer.classList.add("hidden");
