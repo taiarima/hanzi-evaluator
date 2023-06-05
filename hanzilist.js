@@ -2996,7 +2996,7 @@ const hanziList = [
   {
     simplified: "量",
     traditional: "量",
-    pronunciation: "liáng",
+    pronunciation: "liàng，liáng",
     meaning: "to measure",
   },
   {
@@ -10366,7 +10366,7 @@ const hanziList = [
   {
     simplified: "柏",
     traditional: "柏",
-    pronunciation: "bǎi",
+    pronunciation: "bǎi, Bó",
     meaning: "cedar; cypress; [bo2]",
   },
   {
@@ -21498,8 +21498,7 @@ const hanziList = [
     simplified: "凄",
     traditional: "悽",
     pronunciation: "qī",
-    meaning:
-      "sad; mournful; dismal; grim; lamentable; mournful",
+    meaning: "sad; mournful; dismal; grim; lamentable; mournful",
   },
   {
     simplified: "鲫",

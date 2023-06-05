@@ -365,6 +365,7 @@ function initializeTest() {
   // Update GUI
   introText.classList.add("hidden");
   appContainer.classList.remove("hidden");
+  resultsContainer.classList.add("hidden");
   modalChooseList.style.display = "none";
   progressBar.style.width = 0;
 
